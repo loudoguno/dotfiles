@@ -1,0 +1,329 @@
+[/*======= Default (Windows).sublime-keymap - Louis DeSantis - Q1 2017 ========
+	Keymap for Sublime text on Windows Machine
+	*/
+// ================================= NEW/TO DO ==============================
+
+// =========================== OSX MACROS and COMMANDS ===============================
+
+	// MacroOptimize : Ctrl+Command Z
+
+	// Toggle Scroll Sync : Super z, Super s
+	{ "keys": ["Super+z", "Super+s"], "command": "toggle_sync_scroll" },
+
+
+//;==================== OSX GIU/ USER INTERFACE ==========================
+ 
+	// Toggle Console : ctrl .
+	{ "keys": ["ctrl+."], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["Alt+."], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
+	// Context Menu
+	{ "keys": ["Alt+shift+."], "command": "context_menu" },
+	
+	// Toggle Sidebar : Alt+Alt s
+ 	{ "keys": ["Alt+Super+s"], "command": "toggle_side_bar" },
+	// Focus Sidebar
+	{ "keys": ["ctrl+0"], "command": "focus_side_bar" }, // Works via KM
+	{ "keys": ["Super+Alt+`"], "command": "focus_side_bar" },
+
+// ====================== OSX MENU TABS and FILES ============================
+
+	// New Window : Alt n
+	{ "keys": ["Alt+n"], "command": "new_window" },
+	{ "keys": ["Alt+shift+n"], "command": "new_window" },
+	
+	// Opens
+	{ "keys": ["Alt+o"], "command": "prompt_open_file" }, // PC alternative
+	// command: prompt_open_project_or_workspace // Project
+	// command: prompt_switch_project_or_workspace
+	// command: prompt_select_workspace
+	
+	// New File/Tab : Alt t
+	{ "keys": ["Alt+t"], "command": "new_file" },
+	//Left/Right Tab : (Shift)Ctrl TAB  (PgUp/Dn)
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+	// Save
+	{ "keys": [ "Alt+s"], "command": "save" }, // File
+	{ "keys": ["Alt+shift+s", "Alt+shift+s"], "command": "prompt_save_as" }, // As
+	{ "keys": ["Alt+shift+s", "Alt+shift+a"], "command": "save_all" }, // All
+	{ "keys": ["Alt+shift+s", "Alt+shift+a"], "command": "save_project_and_workspace_as" }, // Project
+	// command: save_workspace_as // Workspace
+
+	// Close Workspace : Alt q
+	// { "keys": ["Alt+q"], "command": "close_workspace" }, //WINDOWS
+
+//====================== OSX PANES/GROUPS/VIEWS ==============================
+
+	// Next/Prev Tab : ⌘K J/L
+	{ "keys": ["Alt+k", "Alt+j"], "command": "prev_view" },
+	{ "keys": ["Alt+k", "Alt+l"], "command": "next_view" },
+
+	// Focus Group : Ctrl+K Ctrl+ J/L
+	{ "keys": ["Alt+k", "Alt+k", "Alt+j"], "command": "focus_neighboring_group", "args": {"forward": false} },
+	{ "keys": ["Alt+k", "Alt+k", "Alt+l"], "command": "focus_neighboring_group" },
+	// Move to Group Left/Right
+	{ "keys": ["Alt+k", "Alt+m", "Alt+j"], "command": "move_to_neighboring_group", "args": {"forward": false} },
+	{ "keys": ["Alt+k", "Alt+m", "Alt+l"], "command": "move_to_neighboring_group" },
+	
+	// Focus Group/Pane with Alt + 1-9
+		{ "keys": ["Alt+k", "Alt+k", "Alt+1"], "command": "focus_group", "args": { "group": 0 } },
+		{ "keys": ["Alt+k", "Alt+k", "Alt+2"], "command": "focus_group", "args": { "group": 1 } },
+		{ "keys": ["Alt+k", "Alt+k", "Alt+3"], "command": "focus_group", "args": { "group": 2 } },
+	// Move to Group 1-3
+		{ "keys": ["Alt+k", "Alt+m", "Alt+1"], "command": "move_to_group", "args": { "group": 0 } },
+		{ "keys": ["Alt+k", "Alt+m", "Alt+2"], "command": "move_to_group", "args": { "group": 1 } },
+		{ "keys": ["Alt+k", "Alt+m", "Alt+3"], "command": "move_to_group", "args": { "group": 2 } },
+
+//====================== OSX ORIGAMI ==============================
+
+	// Travel to Pane : arrows
+	{ "keys": ["Alt+k", "left"], "command": "travel_to_pane", "args": {"direction": "left"} },
+	{ "keys": ["Alt+k", "right"], "command": "travel_to_pane", "args": {"direction": "right"} },
+	{ "keys": ["Alt+k", "up"], "command": "travel_to_pane", "args": {"direction": "up"} },
+	{ "keys": ["Alt+k", "down"], "command": "travel_to_pane", "args": {"direction": "down"} },
+	
+	// Zoom In Pane
+	{ "keys": ["Alt+k", "Super+up"], "command": "zoom_pane", "args": {"fraction": 0.9} },
+	{ "keys": ["Alt+k", "Super+down"], "command": "unzoom_pane", "args": {} },
+	
+	// Create Pane : Command
+	// { "keys": ["Alt+k", "Alt+left"], "command": "create_pane", "args": {"direction": "left"} },
+	// { "keys": ["Alt+k", "Alt+right"], "command": "create_pane", "args": {"direction": "right"} },
+	// { "keys": ["Alt+k", "Alt+up"], "command": "create_pane", "args": {"direction": "up"} },
+	// { "keys": ["Alt+k", "Alt+down"], "command": "create_pane", "args": {"direction": "down"} },
+		// You can also add  "give_focus": true to automatically focus on the new pane as follows:
+		// { "keys": [], "command": "create_pane", "args": {"direction": "", "give_focus": true} }
+	
+
+	// Carry to Pane : Shift
+	{ "keys": ["Alt+k", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+	{ "keys": ["Alt+k", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+	{ "keys": ["Alt+k", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+	{ "keys": ["Alt+k", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+
+	// Clone to Pane : Alt
+	{ "keys": ["Alt+k", "Super+up"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
+	{ "keys": ["Alt+k", "Super+right"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
+	{ "keys": ["Alt+k", "Super+down"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
+	{ "keys": ["Alt+k", "Super+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
+	// You can also create the pane automatically with the following command 
+	// (insert empty parameters):
+	// { "keys": [], "command": "create_pane_with_cloned_file", "args": {"direction": ""} }
+
+	
+	// Close Pane : Command+Shift
+	// { "keys": ["Alt+k", "Alt+shift+up"], "command": "destroy_pane", "args": {"direction": "up"} },
+	{ "keys": ["Alt+k", "Alt+shift+up"], "command": "destroy_pane", "args": {"direction": "up"} },
+	{ "keys": ["Alt+k", "Alt+shift+right"], "command": "destroy_pane", "args": {"direction": "right"} },
+	{ "keys": ["Alt+k", "Alt+shift+down"], "command": "destroy_pane", "args": {"direction": "self"} },
+	{ "keys": ["Alt+k", "Alt+shift+left"], "command": "destroy_pane", "args": {"direction": "left"} },
+
+	{ "keys": ["Alt+k", "shift+Alt+Super+up"], "command": "create_pane_with_file", "args": {"direction": "up"} },
+	{ "keys": ["Alt+k", "shift+Alt+Super+right"], "command": "create_pane_with_file", "args": {"direction": "right"} },
+	{ "keys": ["Alt+k", "shift+Alt+Super+down"], "command": "create_pane_with_file", "args": {"direction": "down"} },
+	{ "keys": ["Alt+k", "shift+Alt+Super+left"], "command": "create_pane_with_file", "args": {"direction": "left"} },
+
+
+	// You can pull a file from another pane by binding the following command:
+	// { "keys": [], "command": "pull_file_from_pane", "args": { "direction": ""} }
+
+
+	//Resize Pane
+	// { "keys": ["Alt+k", "Alt+c"], "command": "resize_pane", "args": {"orientation": "cols"} },
+	// { "keys": ["Alt+k", "Alt+r"], "command": "resize_pane", "args": {"orientation": "rows"} }
+
+ 
+	// Set Pane Layout : Alt+k Alt+s Alt 1-3
+		{ "keys": ["Alt+k", "Alt+s", "Alt+1"], "command": "set_layout", "args": {"cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]]}},
+		{ "keys": ["Alt+k", "Alt+s", "Alt+2"], "command": "set_layout", "args": {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}},
+		{ "keys": ["Alt+k", "Alt+s", "Alt+3"], "command": "set_layout", "args": {"cols": [0.0, 0.33, 0.66, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]}},
+
+// ============================ OSX GO TO ===================================
+	
+	// Jump to Anything : Command j 
+	{ "keys": ["Alt+j"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	// Jump to Window
+	{ "keys": ["Alt+j", "Alt+o"], "command": "goto_window" },
+
+	// Go To Symbol "@"
+	{ "keys": ["Alt+j", "Alt+s"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	// Go To Line in Current File ":"
+	{ "keys": ["Alt+j", "Alt+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	// Go To Word in Current File (#)
+	{ "keys": ["Alt+j", "Alt+w"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+	// Go To Definition
+	{ "keys": ["Alt+j", "Alt+d"], "command": "goto_definition" },
+	// 	{ "keys": ["f12"], "command": "goto_definition" },
+
+	// Show Command Palette : Command_Shift P
+	{ "keys": ["Alt+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+
+// ============================== OSX CODE FOLDING ==============================
+	
+	// Indent
+	{ "keys": ["shift+Super+a"], "command": "unindent"},
+	{ "keys": ["shift+Super+d"], "command": "indent"},
+	// Swap line 
+	{ "keys": ["shift+Super+w"], "command": "swap_line_up" }, // Swap Line Up : W
+	{ "keys": ["shift+Super+s"], "command": "swap_line_down" }, // Swap Line Down : S
+	{ "keys": ["ctrl+Alt+w"], "command": "swap_line_up" }, // Swap Line Up : W
+	{ "keys": ["ctrl+Alt+s"], "command": "swap_line_down" }, // Swap Line Down : S
+	// Comment
+	{ "keys": ["shift+Super+z"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["shift+Super+forward_slash"], "command": "toggle_comment", "args": { "block": true } },
+	// Wrap
+	{ "keys": ["shift+Super+x"], "command": "toggle_setting", "args": { "setting": "word_wrap"}},
+
+	// Fold : QQ
+	{ "keys": ["shift+Super+q", "shift+Super+q"], "command": "fold" }, // Line QQ
+	// Fold All : QA 
+	{ "keys": ["shift+Super+q", "shift+Super+a"], "command": "fold_by_level", "args": {"level": 0} },
+	// Unfold Line : QW
+	{ "keys": ["shift+Super+q", "shift+Super+w"], "command": "unfold" }, 
+	// Unfold All : QS
+	{ "keys": ["shift+Super+q", "shift+Alt+s"], "command": "unfold_all" },
+
+// ============================== OSX TEXT ===================================
+
+	// //  Caret Position Back/Forth (cycle through caret history in same pane)
+		{ "keys": ["Alt+["], "command": "jump_back" },
+		{ "keys": ["Alt+]"], "command": "jump_forward" },
+	// Prev/Next View (Step through active panes chronilogically
+		{ "keys": ["Super+["], "command": "prev_view" },
+		{ "keys": ["Super+]"], "command": "next_view" },
+	//  Prev/Next View in Stack (Just goes back tab chronologically in same pane)
+		// { "keys": ["Alt+]"], "command": "prev_view_in_stack" },
+		// { "keys": ["Alt+["], "command": "next_view_in_stack" },
+
+	// Scroll
+	{ "keys": ["ctrl+Super+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
+	{ "keys": ["ctrl+Super+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
+
+	
+// ========================== AUTO and SCOPE ==========================
+
+	// Auto Complete
+	{ "keys": ["ctrl+space"], "command": "auto_complete" },
+	{ "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+
+
+//========================= OSX CUT/COPY/PASTE/REDO =========================
+	
+	// Copy as Path : Alt+Super c
+	{ "keys": ["Alt+Super+c"], "command": "copy_path" },
+	// Paste and Indent
+	{ "keys": ["Alt+shift+v"], "command": "paste_and_indent" },
+	// Paste From History
+	{ "keys": ["shift+ctrl+Alt+Super+v"], "command": "paste_from_history" },
+	
+	// // Undo/Redo
+	// { "keys": ["ctrl+z"], "command": "undo" },
+	// { "keys": ["ctrl+u"], "command": "soft_undo" },
+	// { "keys": ["ctrl+shift+u"], "command": "soft_redo" },
+	// { "keys": ["ctrl+shift+z"], "command": "redo" },
+	// { "keys": ["ctrl+y"], "command": "redo_or_repeat" },
+
+	// Join Lines
+	// { "keys": ["Alt+j"], "command": "join_lines" },
+	// Duplicate Lines
+	// { "keys": ["Alt+shift+d"], "command": "duplicate_line" },
+
+	// Sort Lines
+	{ "keys": ["f5"], "command": "sort_lines", "args": {"case_sensitive": false} },
+	{ "keys": ["ctrl+f5"], "command": "sort_lines", "args": {"case_sensitive": true} },
+
+// =========================== OSX FIND ==============================
+
+	// Find
+	{ "keys": ["Alt+f", "Alt+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+	{ "keys": ["Alt+g"], "command": "find_next" },
+	{ "keys": ["Alt+shift+g"], "command": "find_prev" },
+		
+	// Find All
+	{ "keys": ["ctrl+Alt+g"], "command": "find_all_under" },
+	// Find in Files
+	{ "keys": ["Alt+f", "Alt+a"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+	{ "keys": ["f4"], "command": "next_result" },
+	{ "keys": ["shift+f4"], "command": "prev_result" },
+	// Find Increment
+	{ "keys": ["Alt+f", "Alt+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
+	{ "keys": ["Alt+shift+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": true} },
+	// use selection for find
+	{ "keys": ["Alt+e"], "command": "slurp_find_string" },
+	
+	// Find Under Expand
+	{ "keys": ["Alt+f", "Alt+d"], "command": "find_under_expand" },
+	// Find Under Skip
+	{ "keys": ["Alt+f", "Alt+z"], "command": "find_under_expand_skip" },
+	// Find Under (Quick Find()
+	{ "keys": ["alt+Alt+g"], "command": "find_under" },
+	{ "keys": ["shift+alt+Alt+g"], "command": "find_under_prev" },
+	
+	// Replace
+	{ "keys": ["Alt+alt+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	{ "keys": ["Alt+alt+e"], "command": "replace_next" },
+	// Replace Next
+	{ "keys": ["Alt+shift+e"], "command": "slurp_replace_string" },
+
+//========================= OSX MOVE/EXPAND/SELECTION  =======================
+
+	// Expand Selection to Line
+	{ "keys": ["Alt+h", "Alt+l"], "command": "expand_selection", "args": {"to": "line"} },
+	// Expand to Scope
+	{ "keys": ["Alt+h", "Alt+s"], "command": "expand_selection", "args": {"to": "scope"} },
+	// Expand to Brackets
+	{ "keys": ["Alt+h", "Alt+b"], "command": "expand_selection", "args": {"to": "brackets"} },
+	// Expand to Indentation
+	{ "keys": ["Alt+h", "Alt+i"], "command": "expand_selection", "args": {"to": "indentation"} },
+	// Tag
+	{ "keys": ["Alt+h", "Alt+t"], "command": "expand_selection", "args": {"to": "tag"} },
+	// Move to Brackets
+	{ "keys": ["Alt+m"], "command": "move_to", "args": {"to": "brackets"} },
+
+	// Bookmarks
+	// { "keys": ["f2"], "command": "next_bookmark" },
+	// { "keys": ["shift+f2"], "command": "prev_bookmark" },
+	// { "keys": ["ctrl+f2"], "command": "toggle_bookmark" },
+	// { "keys": ["ctrl+shift+f2"], "command": "clear_bookmarks" },
+	// { "keys": ["alt+f2"], "command": "select_all_bookmarks" },
+
+// ============================= OSX UNBOUND =================================
+	
+	// Need Quick Explanation of why this is unbound
+	// { "keys": ["ctrl+k"], "command": "Unbound"},
+
+	// Unbound Ctrl ` to prevent window switching issues
+	{ "keys": ["ctrl+`"], "command": "Unbound"},
+// ============================= WINDOWS SPECIFIC ============================
+
+	// Multiple Selection Ctrl+Shift Up/Down
+	{ "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
+
+	// Alt + L/R Arrow Keys as HOME and END
+		{ "keys": ["alt+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+			// 	{ "keys": ["alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+		{ "keys": ["alt+right"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+			//	{ "keys": ["alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+		{ "keys": ["alt+shift+left"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+			// 	{ "keys": ["alt+shift+left"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+		{ "keys": ["alt+shift+right"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+			// { "keys": ["alt+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
+
+	// Go to Page Beginning/End : Ctrl Up/Down WINDOWS
+	{ "keys": ["ctrl+up"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+	{ "keys": ["ctrl+down"], "command": "move_to", "args": {"to": "eof", "extend": false} },
+		// Was increment focus number up down
+		// { "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+		// { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
+
+
+]

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<root>
+
+<!-- ============================ Definitions ============================ -->
+  <!-- <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/VirtualKeyCodes.xml" /> -->
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/KM.XML" />
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/APP.XML" />
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/FILE.XML" />
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/WEB.XML" />
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/ALFRED.XML" />
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/HS.XML" />
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/VK/AppDef.XML" />
+  
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Definitions/ReplacementDefinitions.xml" />
+
+
+<item><name>Modes –––––––––––––––––––––––––––––––––––––––––––––––––––</name>
+    
+    <!-- LouSense -->
+    <!-- <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/LouSense.xml" /> -->
+
+    <!-- Space-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/Space-Mode.xml" />
+    <!-- Semi-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/Semi-Mode.xml" />
+    <!-- F-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/F-Mode.xml" />
+    <!-- N-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/N-Mode.xml" />
+    <!-- S-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/S-Mode.xml" />
+    <!-- A-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/A-Mode.xml" />
+    <!-- C-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/C-Mode.xml" />
+    <!-- D-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/D-Mode.xml" />
+    <!-- Q-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/Q-Mode.xml" />
+    <!-- W-Mode -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/Modes/W-Mode.xml" />
+    
+    
+    <!-- Lou Vi Mode -->
+    <!-- <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/LouViMode.xml" /> -->
+  </item>
+<!--================================ New ================================-->
+<item><name>––––––––––––––––––––––––––––– NEW ––––––––––––––––––––––––––––</name></item>
+  <item>
+    <name>Disable Command-Tab</name>
+    <identifier>private.disable_command_tab</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, VK_COMMAND | ModifierFlag::NONE,
+      KeyCode::VK_NONE
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE,
+      KeyCode::VK_NONE
+    </autogen>
+</item>
+
+
+<!-- ========================== USER Settings ========================== -->
+
+  <item><name>Hyper Key ––––––––––––––––––––––––––––––––––––––––</name></item>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/HyperKey.xml" />
+  <!-- Hyper Space -->
+  <!-- <item><name>HyperSpace –––––––––––––––––––––––––––––––––––</name></item> -->
+  <!-- <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/HyperSpace.xml" /> -->
+
+  <item><name>Easy Keys –––––––––––––––––––––––––––––––––––––––––––––––</name></item>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/EasyKeys.xml" />
+
+  <item><name>Hold Keys –––––––––––––––––––––––––––––––––––––––––––––––</name></item>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/HoldKeys.xml" />
+  
+  <item><name>Hold to Activate –––––––––––––––––––––––––––––––––––</name>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/HoldToActivate.xml" />
+  </item>
+
+  <item><name>Simultaneous –––––––––––––––––––––––––––––––––––</name>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/SimultaneousKeyPress.xml" />
+  </item>
+  
+  <item><name>Double Press Modifers –––––––––––––––––––––––––––––––––––––––</name>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/DoublePressModifiers.xml" />
+  </item>
+
+  <item><name>––––––––––––––––––––– FUNCTION –––––––––––––––––––––</name>
+    <!-- Hold F Keys for Consumer Functions -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/HoldingFKeysforConsumerFunction.xml" />
+    <!-- Toggle via FN -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/ToggleviaFN.xml" />
+    <!-- Alternaive FN Keys -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/AlternativeFnKeys.xml" />
+    <!-- Extra Arrow Keys Keys -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/ExtraArrowKeys.xml" />
+  </item>
+
+  <item><name>Lou Assorted Settings –––––––––––––––––––––––––––––––––––</name></item>
+  <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/LouAssortedSettings.xml" />
+
+  
+  
+  
+  <item><name>Testing –––––––––––––––––––––––––––––––––––––––––––––––––</name>
+    <!-- Syntax Testing -->
+    <include path="{{ ENV_HOME }}/Dropbox/Sync/Karabiner/User/SyntaxTesting.xml" />
+
+    <!-- Hammerspoon Test   -->
+    <item>
+      <name>Hammerspoon test1</name>
+      <identifier>hammerspoon.test1</identifier>
+      <autogen> <!-- Listen for right hand ⌘⌥→ then open the url -->
+        --KeyToKey--
+        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::OPTION_R,
+        KeyCode::VK_OPEN_URL_HS_test1
+      </autogen>
+    </item>
+  </item>
+
+<!-- ========================== DEFAULT SETTINGS ========================== -->
+
+<item><name>Default Settings ––––––––––––––––––––––––––––––––––––––––––</name>
+  <!-- Checkbox Core -->
+  <include once="true" path="{{ ENV_Karabiner_Resources }}/include/checkbox/core.xml" />
+  <!-- Checkbox Custom Settings -->
+  <include once="true" path="{{ ENV_Karabiner_Resources }}/include/checkbox/custom_shortcuts.xml" />
+</item>
+
+<item><name>––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––</name></item>
+
+</root>
