@@ -1,2 +1,5 @@
 # dotfiles
-configuration resources
+Lous configuration resources
+
+## Installation
+Working on a bootstrap file
