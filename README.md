@@ -2,20 +2,29 @@ loudoguno/dotfiles
 ======
 Lou's configuration resources, a work in progress...
 
-Installation
+INSTALLATION
 ------
 * Install git
 
 `Git`
 * clone directory to local folder and run bootstrap.sh to sync repo, copy files to /~
-'$ git clone https://github.com/s10wen/dotfiles.git && cd dotfiles && source bootstrap.sh'
 
-move .extra
-Homebrew
-In progress.. Working on a bootstrap file.
+`$ git clone https://github.com/s10wen/dotfiles.git && cd dotfiles && source bootstrap.sh`
+* move .extra
+* Install Homebrew
 
+`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+	* set up homebrew
 
-File Structure Overview
+`bash brew.sh`
+
+* set up Rupa Z, Jekyll, and sublime text symlink with **install_deps**
+
+* osx
+
+`bash .osx`
+
+FILES
 ------
 
 **configs** - contains configuration files for engines like karabiner, btt, and slte
