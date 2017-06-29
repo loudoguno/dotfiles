@@ -1,0 +1,46 @@
+# Lou's Brewfile 
+# can be run with "brew bundle" 
+
+# Directory to install (do I still need to specify below?)
+cask_args appdir: '~/Applications'
+
+# Brew
+
+brew tap Homebrew/bundle
+
+
+# Casks
+install caskroom/cask/brew-cask
+
+cask install --appdir="~/Applications" dropbox
+cask install --appdir="~/Applications" alfred
+
+
+cask install --appdir="~/Applications" google-chrome
+cask install --appdir="~/Applications" firefox
+cask install --appdir="~/Applications" evernote
+
+cask install --appdir="~/Applications" seil
+cask install --appdir="~/Applications" karabiner
+cask install --appdir="~/Applications" keyboard-maestro
+cask install --appdir="~/Applications" bettertouchtool
+cask install --appdir="~/Applications" slate
+
+cask install --appdir="~/Applications" snagit
+
+cask install --appdir="~/Applications" vlc
+cask install --appdir="~/Applications" spotify
+cask install --appdir="~/Applications" keepass
+cask install --appdir="~/Applications" sublime
+cask install --appdir="~/Applications"
+cask install --appdir="~/Applications"
+cask install --appdir="~/Applications"
+cask install --appdir="~/Applications"
+
+
+Appcleaner
+
+# Taps
+
+brew update 
+brew doctor
