@@ -1,5 +1,8 @@
 # /Users/Loudog/.bash_profile contains a list of all the aliases configured to run in the terminal
 
+# everything below this line differs from S10wen and was here when I_got here
+[ -n "$PS1" ] && source ~/.bash_profile;
+
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------

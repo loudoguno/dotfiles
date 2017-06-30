@@ -1,0 +1,8 @@
+# .path
+
+This file speeds up the process of running executable files. Rather than having to cd back and forth across various paths to executable files, you can set the file paths in your .path dotilfe and then run executable files directly.
+
+Generally, this file isn't held in the public repo as it can contain sensitive information.
+
+Here’s an example ~/.path file that adds ~/utils to the $PATH:
+export PATH="$HOME/utils:$PATH"

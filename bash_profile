@@ -1,4 +1,5 @@
 # Add `~/bin` to the `$PATH`
+# export makes the variable visible to child processess
 export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:

@@ -14,18 +14,24 @@ This gets run first and performs the following...
 1. sourcing ~/.bash_profile will apply the new bash profile to terminal w/o restart
 
 
-**.bash_profile** -
-* loads
-	1. **path** 
-		2. 
-	1. **bash_prompts**
-	1. **exports**
-	1. **aliases**
-	1. **functions**
-	1. **extra**
-* configures features including
+**.bash_profile** - loaded at new terminal sessions, sometimes **bash.rc** is loaded so bash.rc should contain a call for bash_profile
+1. loads
+	* **path** - speeds up process of running executables removing the need to `cd` between directories
+		2. not held in public repo
+	* **bash_prompt** - customizes Bash prompt appearance and colors
+	* **exports** - sets environmental variabls including
+		1. setting default editor
+		2. increases amount of bash command history retained
+		3. highlight section titles in man pagues and don't clear the screen after quiting
+	* **aliases** - contains aliases () for commonly used commands
+		- will list better ones here
+	* **functions**
+	* **extra**
+1. configures features including
+	1.
 	1. autocompletion
-* makes sure .bash_profile is called if it is loaded
+1. makes sure .bash_profile is called if it is loaded
+2. exludes DS_Store, macos, bootstrap, README and LICENCE
 
 
 
