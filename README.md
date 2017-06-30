@@ -7,25 +7,42 @@ FILES
 ------
 
 **bootstrap.sh**
-This gets run first and perforsm the following
-syncs local repo and the one on GitHub
-copies files to home folder, overridding any existing files
-sourceing ~/.bash_profile will apply new settings to terminal w/o restart
-doIt function is invoked when overwrite confirmation is given
+This gets run first and performs the following...
+1. syncs local repo and the one on GitHub
+1. copies files to home folder, overridding any existing files but excluding thins like.git and README
+1. doIt function is invoked when overwrite confirmation is given
+1. sourcing ~/.bash_profile will apply the new bash profile to terminal w/o restart
+
+
+**.bash_profile** -
+* loads
+	1. **path** 
+		2. 
+	1. **bash_prompts**
+	1. **exports**
+	1. **aliases**
+	1. **functions**
+	1. **extra**
+* configures features including
+	1. autocompletion
+* makes sure .bash_profile is called if it is loaded
+
+
+
+**.bashrc**
+file loaded by bash that loads in *path*, *bash_prompts*
 
 **macos** - script for initializing Mac OSX settings
 
 **images** - any images needed upon initializing a new maching
 
-**references ** - contains various files for references
+**references** - contains various files for references
 
 **Brewfile**
 
 
 
-**.bash_profile**
-**.bashrc**
-file loaded by bash that loads in *path*, *bash_prompts*
+
 
 **.path**
 This file speeds up the process of running executable files. 
