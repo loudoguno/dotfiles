@@ -6,15 +6,12 @@ Lou's configuration resources, a work in progress...
 FILES
 ------
 
-**configs** - contains configuration files for engines like karabiner, btt, and slte
-
-* **slate** - .slate file to be included in home directory
-
-* **btt.json** - BetterTouchTool settings export
-
-* **karabiner.xml**
-
-**makesymlinks.sh**
+**bootstrap.sh**
+This gets run first and perforsm the following
+syncs local repo and the one on GitHub
+copies files to home folder, overridding any existing files
+sourceing ~/.bash_profile will apply new settings to terminal w/o restart
+doIt function is invoked when overwrite confirmation is given
 
 **macos** - script for initializing Mac OSX settings
 
@@ -24,10 +21,7 @@ FILES
 
 **Brewfile**
 
-**bootstrap.sh**
-syncs local repo and the one on GitHub
-copies files to home folder, overridding any existing files
-sourcring ~/.bash_profile will apply new settings to terminal w/o restart
+
 
 **.bash_profile**
 **.bashrc**
@@ -56,6 +50,16 @@ screenrc
 vimrc
 install-deps
 
+**configs** - contains configuration files for engines like karabiner, btt, and slte
+
+* **slate** - .slate file to be included in home directory
+
+* **btt.json** - BetterTouchTool settings export
+
+* **karabiner.xml**
+
+**makesymlinks.sh**
+
 **extra** - must be moved to home directory
 GIT_AUTHOR_NAME="Simon Owen"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
@@ -71,10 +75,17 @@ INSTALLATION
 * Install git
 
 `git`
+
 * clone directory to local folder and run bootstrap.sh to sync repo, copy files to /~
 
-`$ git clone https://github.com/s10wen/dotfiles.git && cd dotfiles && source bootstrap.sh`
+`$ git clone https://github.com/s10wen/dotfiles.git` 
+
+
+
+`source bootstrap.sh`
+
 * move .extra
+
 * Install Homebrew
 
 `$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
