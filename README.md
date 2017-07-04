@@ -1,6 +1,39 @@
 loudoguno/dotfiles
 ======
 Lou's configuration resources, a work in progress...
+To Do
+
+
+INSTALLATION
+------
+1. Install git
+
+`git`
+
+1. clone directory to local folder 
+
+	`$ git clone https://github.com/s10wen/dotfiles.git` 
+
+1. run bootstrap.sh to sync repo, copy files to /~
+
+`source bootstrap.sh`
+
+1. move .extra
+
+1. **Homebrew**
+	1. install homebrew
+`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+	1. set up homebrew 
+
+`bash brew.sh`
+
+* set up Rupa Z, Jekyll, and sublime text symlink with **install_deps**
+
+* osx
+
+`bash .osx`
+
+
 
 
 FILES
@@ -93,35 +126,6 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 
-
-INSTALLATION
-------
-* Install git
-
-`git`
-
-* clone directory to local folder and run bootstrap.sh to sync repo, copy files to /~
-
-`$ git clone https://github.com/s10wen/dotfiles.git` 
-
-
-
-`source bootstrap.sh`
-
-* move .extra
-
-* Install Homebrew
-
-`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-	* set up homebrew
-
-`bash brew.sh`
-
-* set up Rupa Z, Jekyll, and sublime text symlink with **install_deps**
-
-* osx
-
-`bash .osx`
 
 
 

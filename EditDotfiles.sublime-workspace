@@ -167,59 +167,26 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 1991,
+				"buffer_size": 3741,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "# MarkdownEditing\n\nMarkdown plugin for Sublime Text. Provides a decent Markdown color scheme (light and dark) with more __robust__ syntax highlighting and useful Markdown editing features for Sublime Text. 3 flavors are supported: Standard Markdown, __GitHub flavored Markdown__, MultiMarkdown.\n\n![MarkdownEditing][github]\n\n[Dark][github 2] and [yellow][github 3] theme available, plus [thirdparty themes](#additional-color-themes). See [configuration](#configuration) section to learn **how to change the theme**.\n\n## Overview\n\n* [Installation](#installation)\n* [Features](#features)\n* [Key Bindings](#key-bindings)\n* [GFM Specific Features](#gfm-specific-features)\n* [Commands for Command Palette](#commands-for-command-palette)\n* [Configuration](#configuration)\n* [Tips](#tips)\n* [Similar Plugins](#similar-plugins)\n* [Known Bugs](#known-bugs)\n* [Contributing](#contributing)\n* [Credits](#credits)\n* [Donation](#donation)\n* [License](#license)   \n\n## Installation\n\n> __Important Note About Installation__\n> \n> Are you getting this error after installation: _**Error loading syntax file** \"Packages/Markdown/Markdown.tmLanguage\": Unable to open Packages/Markdown/Markdown.tmLanguage_? This is caused by open markdown files at the install time. You have to __manually change their syntax to your newly installed Markdown syntax__. Read the below paragraph for more details on this.\n\n_Note_: Sublime text has a native tiny package for Markdown. However, when MarkdownEditing is enabled, native package causes some conflicts. For this reason, MarkdownEditing will automatically disable it. Since it doesn't bring anything new over MarkdownEditing, this is not a loss. But remember, when you disable MarkdownEditing, you have to reenable the native one manually (if you want).\n\nIf you are using Sublime Text 2, you have to disable the native package _manually_. To do that, add `Markdown` to your `ignored_packages` list in ST user settings:\n\n    \"ignored_packages\": [..., \"Markdown\"],\n\n### Package Control\n\nThe preferred method of installation is via [Sublime Package Control][wbond].\n\n1. [Install Sublime Package Control][wbond 2]\n2. From inside Sublime Text, open Package Control's Command Pallet: <kbd>CTRL</kbd> <kbd>SHIFT</kbd> <kbd>P</kbd> (Windows, Linux) or <kbd>CMD</kbd> <kbd>SHIFT</kbd> <kbd>P</kbd> on Mac.\n3. Type `install package` and hit Return. A list of available packages will be displayed.\n4. Type `MarkdownEditing` and hit Return. The package will be downloaded to the appropriate directory.\n5. Restart Sublime Text to complete installation. Open a Markdown file and this custom theme. The features listed below should now be available.\n\n### Manual Installation\n\n1. Download or clone this repository to a directory `MarkdownEditing` in the Sublime Text Packages directory for your platform:\n    * Mac: `git clone https://github.com/SublimeText-Markdown/MarkdownEditing.git ~/Library/Application\\ Support/Sublime\\ Text\\ 2/Packages/MarkdownEditing`\n    * Windows: `git clone https://github.com/SublimeText-Markdown/MarkdownEditing.git %APPDATA%\\Sublime/ Text/ 2/\\MarkdownEditing`\n    * Linux: `git clone https://github.com/SublimeText-Markdown/MarkdownEditing.git ~/.Sublime\\ Text\\ 2/Packages/MarkdownEditing`\n2. Restart Sublime Text to complete installation. Open a Markdown file and this custom theme. The features listed above should now be available.\n\n## Features\n\n* Asterisks and underscores are autopaired and will wrap selected text\n    - If you start an empty pair and hit backspace, both elements are deleted\n    - If you start an empty pair and hit space, the right element is deleted\n* Backticks are paired\n* At the end of a list item, pressing <kbd>Enter</kbd> will automatically insert the new list item bullet.\n    - Pressing <kbd>Tab</kbd> on the blank list item will indent it and switch the list bullet to another one (Order is `*`, `-`, `+` in a cycle).\n    - Pressing <kbd>Shift</kbd> <kbd>Tab</kbd> on the blank list item will unindent it in the same way as above.\n    - Sequential <kbd>Tab</kbd> s or <kbd>Shift</kbd> <kbd>Tab</kbd> s are supported.\n    - You can disable automatic bullet switching or choose which bullets to be used, in your settings file.\n    - If a list item contains a [GFM task][GFM], pressing <kbd>Enter</kbd> at the end of the line will continue with a new blank task.\n* At the end of a blockquote line, pressing <kbd>Enter</kbd> will automatically extend blockquote.\n* Selecting some text and pressing <kbd>&gt;</kbd> will convert it to blockquote. The first and the last line don't have to be fully selected; partial select works, too.\n* Left bracket pairing is modified to eliminate the selection and leave the cursor at a point where you can insert a `[]` or `()` pair for a link\n* Displays Markdown headers in the Project Symbol List (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>). They will start with `#`, so you will know they belong to markdown files at a glance. Also they will be on top of the list because of the precedence of `#`.\n* <kbd>~</kbd> wraps selected text with `~~` (strikethrough).\n* Typing `#` when there's a selection will surround it with `#` to make it a headline. Multiple presses add additional hashes, increasing the level of the header. Once you hit 6 hashes, it will reset to 0 on the next press. The `mde.match_header_hashes` will determine if the `#` are mirrored on both sides or just at the beginning of the line.\n* Typing return at the end of a line that begins with hashmarks will insert closing hashmarks on the headline. They're not required for Markdown, it's just aesthetics, and you can change the `mde.match_header_hashes` option in your settings to enable (disabled by default).\n* Setext-style headers can be completed with `Tab`. That is, typing `Tab` on a line containing only `=` or `-` characters will add or remove enough characters to it to match the length of the line above.\n* New documents will be named automatically based on the first header.\n\n## Key Bindings\n\n| OS X | Windows/Linux | Description |\n|------|---------------|-------------|\n| <kbd>⌘</kbd><kbd>⌥</kbd><kbd>V</kbd> | <kbd>Ctrl</kbd><kbd>Win</kbd><kbd>V</kbd> | Creates or pastes the contents of the clipboard as an inline link on selected text.\n| <kbd>⌘</kbd><kbd>⌥</kbd><kbd>R</kbd> | <kbd>Ctrl</kbd><kbd>Win</kbd><kbd>R</kbd> | Creates or pastes the contents of the clipboard as a reference link.\n| <kbd>⌘</kbd><kbd>⇧</kbd><kbd>K</kbd> | <kbd>Shift</kbd><kbd>Win</kbd><kbd>K</kbd> | Creates or pastes the contents of the clipboard as an inline image on selected text.\n| <kbd>⌘</kbd><kbd>⌥</kbd><kbd>B</kbd> <kbd>⌘</kbd><kbd>⌥</kbd><kbd>I</kbd> | <kbd>Alt</kbd><kbd>B</kbd> <kbd>Alt</kbd><kbd>I</kbd> | These are bound to bold and italic. They work both with and without selections. If there is no selection, they will just transform the word under the cursor. These keybindings will unbold/unitalicize selection if it is already bold/italic.\n| <kbd>⌘</kbd><kbd>^</kbd><kbd>1...6</kbd> | <kbd>Ctrl</kbd><kbd>1...6</kbd> | These will add the corresponding number of hashmarks for headlines. Works on blank lines and selected text in tandem with the above headline tools. If you select an entire existing headline, the current hashmarks will be removed and replaced with the header level you requested. This command respects the `mde.match_header_hashes` preference setting.\n| <kbd>⌥</kbd><kbd>⇧</kbd><kbd>6</kbd> | <kbd>Alt</kbd><kbd>Shift</kbd><kbd>6</kbd> | Inserts a footnote.\n| <kbd>⇧</kbd><kbd>Tab</kbd> | <kbd>Shift</kbd><kbd>Tab</kbd> | Fold/Unfold current section.\n| <kbd>^</kbd><kbd>⇧</kbd><kbd>Tab</kbd> | <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Tab</kbd> | Fold all sections under headings of a certain level.\n| <kbd>⌘</kbd><kbd>⌥</kbd><kbd>PageUp</kbd> <kbd>⌘</kbd><kbd>⌥</kbd><kbd>PageDown</kbd> | <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>PageUp</kbd> <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>PageDown</kbd> | Go to the previous/next heading of the same or higher level\n| <kbd>⌘</kbd><kbd>⇧</kbd><kbd>PageUp</kbd> <kbd>⌘</kbd><kbd>⇧</kbd><kbd>PageDown</kbd> | <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>PageUp</kbd> <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>PageDown</kbd> |  Go to the previous/next heading\n\n## GFM Specific Features\n\nUnderscores in words doesn't mess with bold or italic style:\n\n![underscore-in-words][github 5]\n\nFenced code blocks gets syntax highlighting inside:\n\n![fenced-code-block][github 6]\n\nKeyboard shortcuts gets highlighted like in GitHub:\n\n![keyboard-shortcut][github 7]\n\nStrikethrough is supported:\n\n![strikethrough][github 8]\n\n## Commands for Command Palette\n\n### Fix Underlined Headers\n\nAdjusts every setext-style header to add or remove `=` or `-` characters as needed to match the lengths of their header text.\n\n### Convert Underlined Headers to ATX\n\nConverts every setext-style header into an ATX style header. If something is selected only the headers in the selections will be converted, otherwise the conversion will be applied to the whole view.\n\n### Add Missing Link Labels\n\nScans document for referenced link usages (`[some link][some_ref]` and `[some link][]`) and checks if they are all defined. If there are undefined link references, command will automatically create their definition snippet at the bottom of the file.\n\n### Markdown Lint\n\nPerforms lint on current Markdown file. See [lint rules](lint_docs/RULES.md). Some of the linting rules are customizable via user settings file.\n\n### Switch List Bullet Type\n\nSwitches the highlighted list between numbered and bulleted style.\n\n### Magic Footnotes Command\n\nAdds a footnote after the word under cursor. If cursor is already on a footnote, jumps to its definition or reference.\n\n### Gather Missing Footnotes\n\nAdd definition stubs (if there is none) for all footnotes references.\n\n### Jump Reference\n\nJumps cursor between definitions and references.\n\n### New Reference\n\nAdds a new link under cursor.\n\n### New Inline Link\n\nAdds a new inline link under cursor.\n\n### New Inline Image\n\nAdds a new inline image under cursor.\n\n### New Image\n\nAdds a new image under cursor.\n\n### New Footnote\n\nAdds a footnote under cursor.\n\n### Delete Reference\n\nDeletes the definition and references of a link.\n\n### Organize References\n\nSorts and gives a report on current link references usage.\n\n## Configuration\n\nThe plugin contains 3 different Markdown flavors: Standard Markdown, GitHub flavored Markdown, MultiMarkdown. Default is GitHub flavored Markdown. If you want to set another one as default, open a Markdown file and select your flavor from the menu: `View > Syntax > Open all with current extension as`. You're done.\n\nYou may want to have a look at the default settings files. They are located at:\n\n    Packages/MarkdownEditing/Markdown.sublime-settings         [GitHub flavored Markdown]\n    Packages/MarkdownEditing/Markdown (Standard).sublime-settings\n    Packages/MarkdownEditing/MultiMarkdown.sublime-settings\n\nIf you want to override any of the default settings, you can open the appropriate user settings file using the `Preferences > Package Settings > Markdown Editing` menu. Each flavor has a different settings file.\n\nBold and italic markers are configurable through ST shell variables. You can use `Preferences > Package Settings > Markdown Editing` menu to see the default settings file. In order to override it, copy & paste its content into the user settings file (`Packages/User/Bold and Italic Markers.tmPreferences`) from the menu and make your edits. It is pretty straightforward.\n\nIn order to activate the dark or the yellow theme, put one of these lines to your user settings file of the flavor (`Packages/User/[flavor].sublime-settings`):\n\n    \"color_scheme\": \"Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme\",\n    \"color_scheme\": \"Packages/MarkdownEditing/MarkdownEditor-Yellow.tmTheme\",\n    \"color_scheme\": \"Packages/MarkdownEditing/MarkdownEditor-ArcDark.tmTheme\",\n    \n\nIf you want to go with your already existing theme, you can reenable it with the same method as above. Keep in mind that, that theme may not cover all the parts of the Markdown syntax that this plugin defines.\n\n### Additional color themes:\n\n- [Blackboard theme][linkBlackboardTheme] by [@mdesantis][mdesantis]\n- [monokaiC](https://github.com/avivace/monokaiC) by [@avivace][avivace]\n\nBy default, when you install the plugin, files with these extensions will be assigned to Markdown syntax: \"md\", \"txt\", \"mdown\", \"markdown\", \"markdn\". If you want to prevent any of these extensions to be opened as Markdown, follow these steps:\n\n1. Click on the language menu at bottom right\n2. Select \"Open all with current extension as\"\n3. Choose your preferred syntax for that extension\n\n## Tips\n\nWe are maintaining a [tips section][tips] in our [Wiki][]. Jump there to learn from others or share your experiences with others.\n\n## Enable WYSIWYG\n\nSublime can be configured into a WYSIWYG (what you see is what you get) editor with two other plugins:\n\n1. Markdown Preview (https://packagecontrol.io/packages/Markdown%20Preview)\n1. Livereload (https://packagecontrol.io/packages/LiveReload)\n\nInstall them if you haven't. Then\n\n1. Open Palette\n1. LiveReload: Enable/Disable Plugins\n1. Enable Simple Reload.\n\nNow open palette and choose \"Preview in Broswer\" and you will get a WYSIWYG editor.\n\n## Related Plugins\n\n* [Knockdown][]\n\n     Knockdown offers useful Markdown features and a custom Markdown theme. All of its unique features except its theme are ported to MarkdownEditing and some of them are actually improved further in MarkdownEditing.\n* [Sublime Markdown Extended][]\n* [SmartMarkdown][]\n* See https://packagecontrol.io/search/markdown for more.\n\n## Known Bugs\n\n* Setext-style headers (`===` and `---`) do not show up in the symbol list. This is due to a Sublime Text limitation (see [#158][]). However, we are able to put a placeholder to indicate the existence of the header. We encourage you to use Atx-style headers (`#`).\n\n* Installing for the first time while having markdown files opened may cause MarkdownEditing to behave unexpectedly on those files. Close and reopen those files to fix it.\n\n## Contributing\n\nSee `CONTRIBUTING.md` file.\n\n## Credits\n\nMarkdownEditing was originally created by [Brett Terpstra][brettterpstra] and has become a community project with the goal of consolidating the best features from the varied collection of Markdown packages for Sublime Text. Current development is headed up by [Ali Ayas][github 9] and [Felix Hao][github 10].\n\nRelated blog posts from Brett:\n* http://brettterpstra.com/2012/05/17/markdown-editing-for-sublime-text-2-humble-beginnings/\n* http://brettterpstra.com/2013/11/23/markdownediting-for-sublime-text-updates/\n\nThis plugin contains portions of code from [Knockdown][].\n\nFootnote commands were submitted by [J. Nicholas Geist][github 4] and originated at [geekabouttown][geekabouttown].\n\n## Donation\n\nYou can support [contributors](https://github.com/SublimeText-Markdown/MarkdownEditing/graphs/contributors) of this project individually. Every contributor is welcomed to add his/her line below with any content. Ordering shall be alphabetically by GitHub username.\n\n* [@felixhao28][github 10]: <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9QV2RFV2J8UZS\"><img src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" alt=\"[paypal]\" /></a>\n* [@maliayas][github 9]: <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=W2NXRPD43YSCU&amp;lc=TR&amp;item_name=open-source&amp;item_number=markdown-editing&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted\"><img src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" alt=\"[paypal]\" /></a> ![donation received](http://maliayas.com/business/donation/badge.php?project=markdown_editing)\n\n## License\n\nMarkdownEditing is released under the [MIT License][opensource].\n\n[TableEditor]:                 https://github.com/vkocubinsky/SublimeTableEditor\n[Knockdown]:                   https://github.com/aziz/knockdown/\n[Sublime Markdown Extended]:   https://github.com/jonschlinkert/sublime-markdown-extended\n[SmartMarkdown]:               https://github.com/demon386/SmartMarkdown\n[Typewriter]:                  https://github.com/alehandrof/Typewriter\n[OpenUrl]:                     https://github.com/noahcoad/open-url\n[brettterpstra]: http://brettterpstra.com\n[geekabouttown]: http://geekabouttown.com/posts/sublime-text-2-markdown-footnote-goodness\n[github]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/light.png\n[github 2]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/dark.png\n[github 3]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/yellow.png\n[github 4]: https://github.com/jngeist\n[github 5]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/underscore-in-words.png\n[github 6]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/fenced-code-block.png\n[github 7]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/keyboard-shortcut.png\n[github 8]: https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/strikethrough.png\n[github 9]: https://github.com/maliayas\n[github 10]: https://github.com/felixhao28\n[opensource]: http://www.opensource.org/licenses/MIT\n[wbond]: http://wbond.net/sublime_packages/package_control\n[wbond 2]: http://wbond.net/sublime_packages/package_control/installation\n[FullScreenStatus]: https://github.com/maliayas/SublimeText_FullScreenStatus\n[macstories]: http://www.macstories.net/roundups/sublime-text-2-and-markdown-tips-tricks-and-links/\n[tips]: https://github.com/SublimeText-Markdown/MarkdownEditing/wiki/Tips\n[Wiki]: https://github.com/SublimeText-Markdown/MarkdownEditing/wiki\n[GFM]: https://help.github.com/articles/github-flavored-markdown\n[#158]: https://github.com/SublimeText-Markdown/MarkdownEditing/issues/158\n[linkBlackboardTheme]: https://github.com/mdesantis/MarkdownEditing/blob/blackboard-theme/MarkdownEditor-Blackboard.tmTheme\n[mdesantis]: https://github.com/mdesantis\n[avivace]: https://github.com/avivace\n",
-			"file": "/Users/Loudog/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "bootstrap.sh",
 			"settings":
 			{
-				"buffer_size": 18158,
-				"line_ending": "Unix",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "macos",
-			"settings":
-			{
-				"buffer_size": 56017,
-				"encoding": "UTF-8",
+				"buffer_size": 1249,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Markdown Reference.md",
+			"file": "brew.sh",
 			"settings":
 			{
-				"buffer_size": 667,
+				"buffer_size": 2781,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "bash_profile",
-			"settings":
-			{
-				"buffer_size": 2342,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "# Add `~/bin` to the `$PATH`"
-			}
-		},
-		{
-			"file": "bash_prompt.sh",
-			"settings":
-			{
-				"buffer_size": 1778,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "# @gf3’s Sexy Bash Prompt, inspired by “Extravagan"
 			}
 		},
 		{
@@ -233,13 +200,137 @@
 			}
 		},
 		{
-			"file": "Reference/satorusasozaki Brewfile",
+			"file": "bash_profile",
 			"settings":
 			{
-				"buffer_size": 1624,
+				"buffer_size": 2398,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
-				"name": "satorusasozaki Brewfile"
+				"name": "# Add `~/bin` to the `$PATH`"
+			}
+		},
+		{
+			"file": "bashrc",
+			"settings":
+			{
+				"buffer_size": 1627,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bash_prompt.sh",
+			"settings":
+			{
+				"buffer_size": 1775,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# @gf3’s Sexy Bash Prompt, inspired by “Extravagan"
+			}
+		},
+		{
+			"file": "exports",
+			"settings":
+			{
+				"buffer_size": 787,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# exports"
+			}
+		},
+		{
+			"file": "aliases",
+			"settings":
+			{
+				"buffer_size": 6041,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# Easier navigation: .., ..., ...., ....., ~ and -"
+			}
+		},
+		{
+			"file": "functions",
+			"settings":
+			{
+				"buffer_size": 7335,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# Simple calculator"
+			}
+		},
+		{
+			"file": "gitconfig",
+			"settings":
+			{
+				"buffer_size": 5357,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "[alias]"
+			}
+		},
+		{
+			"file": "gitignore",
+			"settings":
+			{
+				"buffer_size": 195,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# Compiled Python files"
+			}
+		},
+		{
+			"file": "gvimrc",
+			"settings":
+			{
+				"buffer_size": 211,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "\" Use the Solarized Dark theme"
+			}
+		},
+		{
+			"file": "inputrc",
+			"settings":
+			{
+				"buffer_size": 1431,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# Make Tab autocomplete regardless of filename cas"
+			}
+		},
+		{
+			"file": "osx.sh",
+			"settings":
+			{
+				"buffer_size": 45337,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "screenrc",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vimrc",
+			"settings":
+			{
+				"buffer_size": 1170,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "install-deps.sh",
+			"settings":
+			{
+				"buffer_size": 2174,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -250,10 +341,34 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 273.0,
-		"last_filter": "readme",
+		"height": 207.0,
+		"last_filter": "push",
 		"selected_items":
 		[
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"quick",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"quic",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"view",
+				"File: New View into File"
+			],
 			[
 				"readme",
 				"ReadmePlease"
@@ -265,22 +380,6 @@
 			[
 				"mini",
 				"View: Toggle Minimap"
-			],
-			[
-				"push",
-				"Git: Push"
-			],
-			[
-				"quick",
-				"Git: Quick Commit (repo)"
-			],
-			[
-				"add",
-				"Git: Add All"
-			],
-			[
-				"prev",
-				"Markdown Preview: Preview in Browser"
 			],
 			[
 				"pre",
@@ -523,7 +622,7 @@
 				"Git: Status"
 			]
 		],
-		"width": 527.0
+		"width": 384.0
 	},
 	"console":
 	{
@@ -578,12 +677,17 @@
 	],
 	"file_history":
 	[
+		"/Users/Loudog/dotfiles/Reference/satorusasozaki Brewfile",
+		"/Users/Loudog/dotfiles/Reference/mathiasbynens/bootstrap.sh",
+		"/Users/Loudog/dotfiles/path",
+		"/Users/Loudog/dotfiles/bootstrap.sh",
+		"/Users/Loudog/dotfiles/macos",
+		"/Users/Loudog/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
 		"/Users/Loudog/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/README.md",
 		"/Users/Loudog/Dropbox/Sync/Slate/SlateKeys.sublime-workspace",
 		"/Users/Loudog/dotfiles/README.md",
 		"/Users/Loudog/Dropbox/Sync/Karabiner/KarabinerKeys.sublime-workspace",
 		"/Users/Loudog/dotfiles/Markdown Reference.md",
-		"/Users/Loudog/dotfiles/macos",
 		"/Users/Loudog/dotfiles/makesymlinks.sh",
 		"/Users/Loudog/Dropbox/Sync/SublimeText3/User/Edit Preferences Project/EditPreferences.sublime-project",
 		"/Users/Loudog/Desktop/test.aliases",
@@ -700,16 +804,11 @@
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/emacs_mode.xml",
 		"/Users/Loudog/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/Loudog/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/Loudog/Dropbox/Sync/SublimeText3/User/Default (OSX).sublime-keymap",
-		"/C/Users/Win7Lou/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/Users/Loudog/Dropbox/Sync/SublimeText3/User/Snippets/Formatting_Snippets/NewHeader.sublime-snippet",
-		"/Users/Loudog/Dropbox/Sync/SublimeText3/User/Snippets/LogCommands.sublime-snippet",
-		"/C/Users/Win7Lou/AppData/Roaming/Sublime Text 3/Packages/User/InsertBreak.sublime-snippet",
-		"/C/Users/Win7Lou/AppData/Roaming/Sublime Text 3/Packages/User/NewKeymapping.sublime-snippet"
+		"/Users/Loudog/Dropbox/Sync/SublimeText3/User/Default (OSX).sublime-keymap"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -817,6 +916,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"1.",
+			"doIt",
+			"BASH_SOURCE",
+			"dirname",
 			"brew",
 			"COMMAND_L",
 			"Space-Mode",
@@ -940,11 +1043,7 @@
 			"__KeyDownUpToKey__",
 			"__KeyDownUpToKey__ ",
 			"F-MODE_KEY",
-			"<identifier>",
-			"<!--",
-			"<autogen>",
-			">\n",
-			"Messages"
+			"<identifier>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -999,356 +1098,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1991,
+						"buffer_size": 3741,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								713,
-								713
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"last_modified_indicator": true,
-							"last_modified_indicator_file_save_clear": false,
-							"last_modified_indicator_multiline": true,
-							"origPos":
-							[
-								0.0,
-								438.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/MarkdownEditing/Markdown (Standard).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 438.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/Loudog/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18158,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18158,
-								18158
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"last_modified_indicator": true,
-							"last_modified_indicator_file_save_clear": false,
-							"last_modified_indicator_multiline": true,
-							"origPos":
-							[
-								0.0,
-								3305.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "macos",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 56017,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								905,
-								916
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"last_modified_indicator": true,
-							"last_modified_indicator_file_save_clear": false,
-							"last_modified_indicator_multiline": true,
-							"origPos":
-							[
-								0.0,
-								0.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Markdown Reference.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 667,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								273,
-								273
+								2624,
+								2624
 							]
 						],
 						"settings":
@@ -1435,40 +1193,48 @@
 							"origPos":
 							[
 								0.0,
-								15.0
+								1010.0
 							],
 							"parser": "github",
 							"syncScroll": false,
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"target": "browser"
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"target": "browser",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 15.0,
+						"translation.y": 884.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 17,
+			"sheets":
+			[
 				{
-					"buffer": 4,
-					"file": "bash_profile",
+					"buffer": 0,
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2342,
+						"buffer_size": 3741,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								573,
-								573
+								3253,
+								3253
 							]
 						],
 						"settings":
 						{
-							"auto_name": "# Add `~/bin` to the `$PATH`",
+							"auto_complete": false,
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1487,41 +1253,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1532,6 +1278,11 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1541,7 +1292,137 @@
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"color_scheme": "Packages/InactivePanes/Packages/Theme - Flatland/Flatland Dark.tmTheme",
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								992.0
+							],
+							"parser": "github",
+							"syncScroll": false,
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"target": "browser",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1572.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "bootstrap.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1552,61 +1433,46 @@
 								0.0
 							],
 							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "bash_prompt.sh",
+					"buffer": 2,
+					"file": "brew.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1778,
+						"buffer_size": 2781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								412,
-								412
+								2008,
+								2008
 							]
 						],
 						"settings":
 						{
-							"auto_name": "# @gf3’s Sexy Bash Prompt, inspired by “Extravagan",
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										999,
-										1001
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/dot.png",
-										"brackethighlighter.default"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										364,
-										366
-									]
 								},
 								"unmatched":
 								{
@@ -1614,41 +1480,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1659,6 +1505,11 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1668,7 +1519,22 @@
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1676,22 +1542,20 @@
 							"origPos":
 							[
 								0.0,
-								53.0
+								1071.0
 							],
 							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 53.0,
+						"translation.y": 1071.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 3,
 					"file": "brewfile",
 					"semi_transient": false,
 					"settings":
@@ -1728,41 +1592,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1773,6 +1617,11 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1782,20 +1631,35 @@
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
 							"origPos":
 							[
-								47.0,
+								0.0,
 								0.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
 						},
-						"translation.x": 47.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1803,25 +1667,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "Reference/satorusasozaki Brewfile",
+					"buffer": 4,
+					"file": "bash_profile",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1624,
+						"buffer_size": 2398,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								317,
-								317
+								84,
+								84
 							]
 						],
 						"settings":
 						{
-							"auto_name": "satorusasozaki Brewfile",
+							"auto_name": "# Add `~/bin` to the `$PATH`",
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1840,61 +1704,172 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								309.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 309.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "bashrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								725,
+								725
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
-								"bh_default_content"
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1912,6 +1887,1369 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "bash_prompt.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1775,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								995,
+								995
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# @gf3’s Sexy Bash Prompt, inspired by “Extravagan",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										994,
+										995
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										987,
+										988
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "exports",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# exports",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "aliases",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5354,
+								5354
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Easier navigation: .., ..., ...., ....., ~ and -",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								1983.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1983.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "functions",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								522,
+								522
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Simple calculator",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								3728.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3728.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "gitconfig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1054,
+								1054
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[alias]",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								131.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 131.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Compiled Python files",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "gvimrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"auto_name": "\" Use the Solarized Dark theme",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "inputrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								295,
+								295
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Make Tab autocomplete regardless of filename cas",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "osx.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38303,
+								38303
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								11.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 11.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "screenrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "vimrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "install-deps.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1765,
+								1765
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								377.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 287.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1984,6 +3322,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"vim",
+				"vimrc"
+			],
+			[
+				"bash",
+				"bash_profile"
+			],
+			[
+				"bashrc",
+				"bashrc"
+			],
+			[
+				"boot",
+				"bootstrap.sh"
+			],
 			[
 				"keylist",
 				"Karabiner/Reference/KeyList.xml"
@@ -2479,22 +3833,6 @@
 			[
 				"tab",
 				"checkbox/standards/tab.xml"
-			],
-			[
-				"capsl",
-				"Karabiner/User/CapslockWASD.xml"
-			],
-			[
-				"checkbox/core",
-				"Resources/include/checkbox/core.xml"
-			],
-			[
-				"header",
-				"Snippets/Formatting_Snippets/NewHeader.sublime-snippet"
-			],
-			[
-				"headin",
-				"Snippets\\Formatting_Snippets\\NewHeader.sublime-snippet"
 			]
 		],
 		"width": 0.0
@@ -2533,9 +3871,24 @@
 		],
 		"width": 392.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		]
 	},
 	"show_minimap": false,
 	"show_open_files": false,
