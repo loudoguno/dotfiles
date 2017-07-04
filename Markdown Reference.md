@@ -1,5 +1,14 @@
 Markdown Reference
+
+Take me to [pookie](#pookie)
+
 Headers
+
+## The Header
+
+
+[Link to Header](#the-header)
+
 
 # This is an <h1> tag
 ## This is an <h2> tag
@@ -47,3 +56,10 @@ Inline code
 I think you should use an
 `<addr>` element here instead.
 
+
+Anchor
+
+<a name="pookie"></a>
+
+
+[Link to Header](#the-header)

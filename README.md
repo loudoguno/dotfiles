@@ -6,26 +6,30 @@ To Do
 
 INSTALLATION
 ------
+### 1) Git
+
 1. Install git
+	
+	`git`
 
-`git`
+1. Clone directory to local folder 
 
-1. clone directory to local folder 
+	`git clone https://github.com/s10wen/dotfiles.git` 
 
-	`$ git clone https://github.com/s10wen/dotfiles.git` 
+1. Run bootstrap.sh to sync repo, copy files to /~ [](#bootstrap.sh)
 
-1. run bootstrap.sh to sync repo, copy files to /~
+	`source bootstrap.sh`
 
-`source bootstrap.sh`
+1. Move .extra
 
-1. move .extra
+### 2) Homebrew
+1. install homebrew
+	
+	`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-1. **Homebrew**
-	1. install homebrew
-`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-	1. set up homebrew 
+1. Set up homebrew 
 
-`bash brew.sh`
+	`bash brew.sh`
 
 * set up Rupa Z, Jekyll, and sublime text symlink with **install_deps**
 
@@ -39,7 +43,7 @@ INSTALLATION
 FILES
 ------
 
-**bootstrap.sh**
+##### bootstrap.sh
 This gets run first and performs the following...
 1. syncs local repo and the one on GitHub
 1. copies files to home folder, overridding any existing files but excluding thins like.git and README
