@@ -1,5 +1,8 @@
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Tell OS_to prioritize programs installed by Homebrew (in /usr/local/bin) rather than OS Default
+$ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+
 
 # run brewfile
 
@@ -7,38 +10,61 @@
 
 # Check that homebrew is installed correctly and self diagnose
 brew doctor
-
-# Update the index of available packages (aka recipes)
+# Update the index of available packages (aka recipes) and cask
 brew update
 
-# Update an application
-brew upgrade AppName
+# View list of installed recipes
+brew list
+brew list --versions
+# See what needs to be updated
+brew outdated
 
-#add formula hosted on non-homebrew repos (taps)
+# install a package
+brew install AppName
+	-mas
+# Update an application
+brew upgrade AppNam
+brew info AppName
+# Remove outdated versions from the cellar.
+brew cleanup AppName
+#Uninstall formula
+brew remove AppName
+
+
+
+# Taps - Add formula hosted on non-homebrew repos (taps) (http://docs.brew.sh/brew-tap.html)
+# list currently traccked taps
 brew tap
 
-brew cleanup
 
 
-brew install
-	-mas
+# Cask
+# Allows you to install GUI Apps
+# comes installed with Homebrew directoy
 
-# Homebrew Cask - recipes that let you isntall GUI_apps
+brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
-	-cask install alfred
-		-cask install google-chrome
+
+# Install via Cask
+install
+# Check casks installed
+ls /usr/local/Caskroom
+search
+uninstall
 
 
+-cask install alfred
+cask install --appdir="~/Applications" google-chrome
 
+
+# Bundle
 # Process brew file in current directory, adding brew to beginning of each line
 brew bundle
-
 # create brewfile form all existing Homebrew Packages installed
 brew bundle dump
 
 
-# Remove outdated versions from the cellar.
-brew cleanup
+
 
 
 

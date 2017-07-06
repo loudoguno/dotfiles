@@ -10,8 +10,9 @@ brew update
 brew upgrade --all
 
 
-brew cask install dropbox
-brew cask install google-chrome
+brew install blueutil
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
