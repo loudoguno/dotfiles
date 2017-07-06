@@ -40,7 +40,7 @@ brew tap
 
 # Cask
 # Allows you to install GUI Apps
-# comes installed with Homebrew directoy
+# comes installed with Homebrew directly
 
 brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
