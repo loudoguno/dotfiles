@@ -7,39 +7,37 @@
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 # while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Specify directory
-cask_args appdir: '~/Applications'
 
 # Install Packages
 brew 'blueutil'
+brew 'mas'
 
 # Casks
+# Specify directory
+cask_args appdir: '~/Applications'
+
 cask 'dropbox'
 cask 'google-chrome'
 cask 'alfred'
 
-# cask install --appdir="~/Applications" seil
-# cask install --appdir="~/Applications" karabiner
-# cask install --appdir="~/Applications" keyboard-maestro
-# cask install --appdir="~/Applications" bettertouchtool
-# cask install --appdir="~/Applications" slate
+cask  'seil'
+cask  'karabiner'
+cask  'keyboard-maestro'
+cask  'bettertouchtool'
+cask  'slate'
 
-# cask install --appdir="~/Applications" google-chrome
-# cask install --appdir="~/Applications" firefox
-# cask install --appdir="~/Applications" evernote
-# cask install --appdir="~/Applications" sublime
+cask  'google-chrome'
+cask  'firefox'
+cask  'evernote'
+cask  'sublime'
 
+cask  'snagit'
 
+cask  'vlc'
+cask  'spotify'
+cask  'keepass'
 
-# cask install --appdir="~/Applications" snagit
-
-# cask install --appdir="~/Applications" vlc
-# cask install --appdir="~/Applications" spotify
-# cask install --appdir="~/Applications" keepass
-
-
-# cask install --appdir="~/Applications" appcleaner
+cask  'appcleaner'
 
 
 
-# mas
