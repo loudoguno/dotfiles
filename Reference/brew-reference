@@ -1,0 +1,42 @@
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+
+# Check that homebrew is installed correctly and self diagnose
+brew doctor
+
+# Update the index of available packages (aka recipes)
+brew update
+
+# Update an application
+brew upgrade AppName
+
+#add formula hosted on non-homebrew repos (taps)
+brew tap
+
+brew cleanup
+
+
+brew install
+	-mas
+
+# Homebrew Cask - recipes that let you isntall GUI_apps
+brew install caskroom/cask/brew-cask
+	-cask install alfred
+		-cask install google-chrome
+
+
+
+# Process brew file in current directory, adding brew to beginning of each line
+brew bundle
+
+# create brewfile form all existing Homebrew Packages installed
+brew bundle dump
+
+
+brew bundle clean
+
+
+
+END
