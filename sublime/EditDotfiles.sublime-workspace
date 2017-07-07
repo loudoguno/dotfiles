@@ -164,7 +164,15 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"file": "/Users/Loudog/dotfiles/-ToDo",
+			"settings":
+			{
+				"buffer_size": 674,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Loudog/dotfiles/README.md",
 			"settings":
 			{
 				"buffer_size": 4529,
@@ -172,7 +180,16 @@
 			}
 		},
 		{
-			"file": "In Progress/brew.sh",
+			"file": "/Users/Loudog/dotfiles/lou-brew.sh",
+			"settings":
+			{
+				"buffer_size": 1709,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Loudog/dotfiles/resources/brew.sh",
 			"settings":
 			{
 				"buffer_size": 2781,
@@ -181,38 +198,20 @@
 			}
 		},
 		{
-			"file": "ToDo",
+			"file": "/Users/Loudog/dotfiles/ToDo",
 			"settings":
 			{
 				"buffer_size": 673,
 				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "# Dotfiles-ToDo"
-			}
-		},
-		{
-			"file": "lou-osx",
-			"settings":
-			{
-				"buffer_size": 55936,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "lou-brew.sh",
+			"file": "/Users/Loudog/dotfiles/lou-osx",
 			"settings":
 			{
-				"buffer_size": 1236,
+				"buffer_size": 55940,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "In Progress/bootstrap.sh",
-			"settings":
-			{
-				"buffer_size": 1249,
 				"line_ending": "Unix"
 			}
 		}
@@ -525,7 +524,7 @@
 				"Git: Status"
 			]
 		],
-		"width": 536.0
+		"width": 427.0
 	},
 	"console":
 	{
@@ -577,13 +576,18 @@
 	"expanded_folders":
 	[
 		"/Users/Loudog/dotfiles",
-		"/Users/Loudog/dotfiles/In Progress",
-		"/Users/Loudog/dotfiles/Reference"
+		"/Users/Loudog/dotfiles/resources"
 	],
 	"file_history":
 	[
 		"/Users/Loudog/dotfiles/lou-cask",
 		"/Users/Loudog/dotfiles/Brewfile",
+		"/Users/Loudog/dotfiles/sublime/In Progress/bootstrap.sh",
+		"/Users/Loudog/dotfiles/sublime/lou-brew.sh",
+		"/Users/Loudog/dotfiles/sublime/lou-osx",
+		"/Users/Loudog/dotfiles/sublime/In Progress/brew.sh",
+		"/Users/Loudog/dotfiles/sublime/README.md",
+		"/Users/Loudog/dotfiles/sublime/ToDo",
 		"/Users/Loudog/dotfiles/Reference/brew-reference",
 		"/Users/Loudog/dotfiles/EditDotfiles.sublime-workspace",
 		"/Users/Loudog/dotfiles/README.md",
@@ -703,13 +707,7 @@
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/custom_shortcuts.xml",
 		"/Users/Loudog/Library/Application Support/Karabiner/private.xml",
 		"/Users/Loudog/Dropbox/Sync/Karabiner/User/LouBrowsingMode.xml",
-		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/browsing_mode.xml",
-		"/Users/Loudog/Library/Application Support/Karabiner/LaunchermodeBackup",
-		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/core.xml",
-		"/Users/Loudog/sublime_backups/2017-04-19/Users/Loudog/Dropbox/Sync/Scripts/OldMBP_082659.ahk",
-		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/languages/japanese/keyboard_layouts.xml",
-		"/Users/Loudog/Dropbox/Sync/Karabiner/User/LouViMode.xml",
-		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/vi_mode.xml"
+		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/browsing_mode.xml"
 	],
 	"find":
 	{
@@ -994,16 +992,16 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
+					"file": "/Users/Loudog/dotfiles/-ToDo",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4529,
+						"buffer_size": 674,
 						"regions":
 						{
 						},
@@ -1016,7 +1014,117 @@
 						],
 						"settings":
 						{
-							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Loudog/dotfiles/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								130,
+								130
+							]
+						],
+						"settings":
+						{
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1102,34 +1210,34 @@
 							"origPos":
 							[
 								0.0,
-								3.0
+								0.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "In Progress/brew.sh",
+					"buffer": 2,
+					"file": "/Users/Loudog/dotfiles/lou-brew.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2781,
+						"buffer_size": 1709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								573,
-								573
+								471,
+								471
 							]
 						],
 						"settings":
@@ -1224,18 +1332,129 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "ToDo",
+					"buffer": 3,
+					"file": "/Users/Loudog/dotfiles/resources/brew.sh",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1699,
+								1699
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/Loudog/dotfiles/ToDo",
 					"semi_transient": false,
 					"settings":
 					{
@@ -1246,13 +1465,12 @@
 						"selection":
 						[
 							[
-								24,
-								24
+								193,
+								193
 							]
 						],
 						"settings":
 						{
-							"auto_name": "# Dotfiles-ToDo",
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1342,246 +1560,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "lou-osx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 55936,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7167,
-								7167
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"last_modified_indicator": true,
-							"last_modified_indicator_file_save_clear": false,
-							"last_modified_indicator_multiline": true,
-							"origPos":
-							[
-								0.0,
-								2477.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2477.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "lou-brew.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1236,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								257,
-								257
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"last_modified_indicator": true,
-							"last_modified_indicator_file_save_clear": false,
-							"last_modified_indicator_multiline": true,
-							"origPos":
-							[
-								0.0,
-								0.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "In Progress/bootstrap.sh",
+					"file": "/Users/Loudog/dotfiles/lou-osx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1249,
+						"buffer_size": 55940,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21,
-								21
+								38206,
+								38206
 							]
 						],
 						"settings":
@@ -1666,17 +1662,16 @@
 							"origPos":
 							[
 								0.0,
-								0.0
+								14385.0
 							],
 							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 14385.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
