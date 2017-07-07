@@ -52,6 +52,16 @@ brew cask install --appdir="~/Applications" spotify
 brew cask install --appdir="~/Applications" keepassx
 
 brew cask install --appdir="~/Applications" appcleaner
+brew cask install --appdir="~/Applications" numi
+brew cask install --appdir="~/Applications" qbittorrent
+brew cask install --appdir="~/Applications" skitch
+brew cask install --appdir="~/Applications" microsoft-office
+brew cask install --appdir="~/Applications" fantastical
+# brew cask install --appdir="~/Applications" hammerspoon
+brew cask install --appdir="~/Applications" electrum
+brew cask install --appdir="~/Applications" coconutbattery
+brew cask install --appdir="~/Applications" ui-browser
+
 
 
 
