@@ -19,6 +19,7 @@ brew upgrade --all
 
 # Install Packages
 brew install blueutil
+brew install mackup
 
 
 # Casks# Install Cask
