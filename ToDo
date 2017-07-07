@@ -1,6 +1,24 @@
 # Dotfiles-ToDo
 
 
+# Apps
+Work on KeePass
+
+# Sublime
+syncing of preferences, keymap, user folder, packages...
+
+# System Preferences
+Work on Mackup to back up system preferences
+
+# Shell
+OhMyZsh
+
+
+# Other
+extra
+symlinks
+
+
 gitignore
 # Compiled source #
 ###################

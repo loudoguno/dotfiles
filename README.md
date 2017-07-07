@@ -40,6 +40,9 @@ INSTALLATION
 	
 	`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
+1. Prioritize Homebrew path
+	`$ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile`
+
 1. Set up homebrew using brew.sh [link](https://github.com/loudoguno/dotfiles#bootstrapsh)
 
 	`bash brew.sh`
@@ -49,7 +52,8 @@ INSTALLATION
 * set up Rupa Z, Jekyll, and sublime text symlink with **install_deps**
 
 ### 4) OSX Preferences
-
+`source lou-osx`
+or
 `bash .osx`
 
 

@@ -167,17 +167,53 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 4415,
+				"buffer_size": 4529,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "# Dotfiles-ToDo\n\n\ngitignore\n# Compiled source #\n###################\n*.com\n*.class\n*.dll\n*.exe\n*.o\n*.so\n\n# Packages #\n############\n# it's better to unpack these files and commit the raw source\n# git has its own built in compression methods\n*.7z\n*.dmg\n*.gz\n*.iso\n*.jar\n*.rar\n*.tar\n*.zip\n\n# Logs and databases #\n######################\n*.log\n*.sql\n*.sqlite\n\n# OS generated files #\n######################\n.DS_Store\n.DS_Store?\n._*\n.Spotlight-V100\n.Trashes\nehthumbs.db\nThumbs.db",
+			"file": "In Progress/brew.sh",
 			"settings":
 			{
-				"buffer_size": 471,
+				"buffer_size": 2781,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ToDo",
+			"settings":
+			{
+				"buffer_size": 673,
+				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "# Dotfiles-ToDo"
+			}
+		},
+		{
+			"file": "lou-osx",
+			"settings":
+			{
+				"buffer_size": 55910,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lou-brew.sh",
+			"settings":
+			{
+				"buffer_size": 1236,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "In Progress/bootstrap.sh",
+			"settings":
+			{
+				"buffer_size": 1249,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -188,7 +224,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 207.0,
+		"height": 163.0,
 		"last_filter": "push",
 		"selected_items":
 		[
@@ -201,12 +237,20 @@
 				"Git: Quick Commit (repo)"
 			],
 			[
-				"add",
-				"Git: Add All"
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"fetch",
+				"Git: Fetch"
 			],
 			[
 				"commit",
 				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
 			],
 			[
 				"git",
@@ -481,7 +525,7 @@
 				"Git: Status"
 			]
 		],
-		"width": 619.0
+		"width": 536.0
 	},
 	"console":
 	{
@@ -532,10 +576,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Loudog/dotfiles"
+		"/Users/Loudog/dotfiles",
+		"/Users/Loudog/dotfiles/In Progress",
+		"/Users/Loudog/dotfiles/Reference"
 	],
 	"file_history":
 	[
+		"/Users/Loudog/dotfiles/lou-cask",
+		"/Users/Loudog/dotfiles/Brewfile",
+		"/Users/Loudog/dotfiles/Reference/brew-reference",
+		"/Users/Loudog/dotfiles/EditDotfiles.sublime-workspace",
 		"/Users/Loudog/dotfiles/README.md",
 		"/Users/Loudog/dotfiles/brewfile",
 		"/Users/Loudog/dotfiles/vimrc",
@@ -659,11 +709,7 @@
 		"/Users/Loudog/sublime_backups/2017-04-19/Users/Loudog/Dropbox/Sync/Scripts/OldMBP_082659.ahk",
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/languages/japanese/keyboard_layouts.xml",
 		"/Users/Loudog/Dropbox/Sync/Karabiner/User/LouViMode.xml",
-		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/vi_mode.xml",
-		"/Users/Loudog/.bash_profile",
-		"/Users/Loudog/Dropbox/Sync/Karabiner/User/SemiColonArrowKeys.xml",
-		"/Users/Loudog/Dropbox/Sync/Karabiner/HoldingFKeysforConsumerFunction.xml",
-		"/Users/Loudog/Dropbox/Sync/Karabiner/User/CapslockWASD.xml"
+		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/vi_mode.xml"
 	],
 	"find":
 	{
@@ -775,6 +821,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cask",
+			"install --appdir=\"~/Applications\"",
+			"install",
+			"# ",
+			"cask 'dropbox'\n",
 			"bre",
 			"- ",
 			"-",
@@ -897,12 +948,7 @@
 			"Hyper",
 			"LC Window Center",
 			"Left Click Center",
-			"K",
-			"I",
-			"L",
-			"J",
-			"Focus",
-			"<autogen>"
+			"K"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -948,7 +994,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -957,15 +1003,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4415,
+						"buffer_size": 4529,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								812,
-								812
+								0,
+								0
 							]
 						],
 						"settings":
@@ -985,11 +1031,6 @@
 								},
 								"unmatched":
 								{
-									"1":
-									[
-										891,
-										892
-									]
 								}
 							},
 							"bracket_highlighter.regions":
@@ -999,31 +1040,114 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/InactivePanes/Packages/MarkdownEditing/MarkdownEditor.tmTheme",
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								3.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "In Progress/brew.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2781,
+								2725
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -1034,11 +1158,6 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1048,26 +1167,60 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
 							],
-							"color_scheme": "Packages/InactivePanes/Packages/MarkdownEditing/MarkdownEditor.tmTheme",
+							"color_scheme": "Packages/InactivePanes/Packages/Theme - Flatland/Flatland Dark.tmTheme",
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
 							"origPos":
 							[
 								0.0,
-								0.0
+								1083.0
 							],
 							"syncScroll": false,
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1083.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1077,19 +1230,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "ToDo",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 471,
+						"buffer_size": 673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27,
-								27
+								217,
+								217
 							]
 						],
 						"settings":
@@ -1113,6 +1267,354 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lou-osx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								771,
+								771
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								1082.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1082.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "lou-brew.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "In Progress/bootstrap.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										906,
+										907
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										647,
+										648
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1169,7 +1671,6 @@
 								"bh_tag_close",
 								"bh_tag_content"
 							],
-							"default_dir": "/Users/Loudog/dotfiles",
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
@@ -1178,13 +1679,15 @@
 								0.0,
 								0.0
 							],
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1258,6 +1761,18 @@
 		"selected_items":
 		[
 			[
+				"brewfile",
+				"Brewfile"
+			],
+			[
+				"macos",
+				"macos"
+			],
+			[
+				"boot",
+				"In Progress/bootstrap.sh"
+			],
+			[
 				"readme",
 				"README.md"
 			],
@@ -1276,10 +1791,6 @@
 			[
 				"bashrc",
 				"bashrc"
-			],
-			[
-				"boot",
-				"bootstrap.sh"
 			],
 			[
 				"keylist",
@@ -1760,14 +2271,6 @@
 			[
 				"vi",
 				"checkbox/vi_mode.xml"
-			],
-			[
-				"alternative",
-				"Karabiner/User/AlternativeFnKeys.xml"
-			],
-			[
-				"custm",
-				"checkbox/custom_shortcuts.xml"
 			]
 		],
 		"width": 0.0
@@ -1813,7 +2316,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":

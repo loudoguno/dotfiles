@@ -35,7 +35,7 @@ cask  'snagit'
 
 cask  'vlc'
 cask  'spotify'
-cask  'keepass'
+cask  'keepassx'
 
 cask  'appcleaner'
 
