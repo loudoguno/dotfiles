@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/Loudog/dotfiles"
 		}
 	]
 }
