@@ -1,3 +1,4 @@
+# S10Wen's bash profile
 # Add `~/bin` to the `$PATH`
 # export makes the variable visible to child processess
 export PATH="$HOME/bin:$PATH";
@@ -18,7 +19,7 @@ shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
-b
+
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`

@@ -27,15 +27,18 @@ sudo nvram SystemAudioVolume=" "
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Set highlight color to blue
+defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.937255 0.690196"
 # Set highlight color to green
-defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
+# defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# Set sidebar icon size to small (1) - medium (2)
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 
 
 # Always show scrollbars
+	# Possible values: `WhenScrolling`, `Automatic` and `Always`
 # defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
+
 
 # Disable the over-the-top focus ring animation
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
@@ -50,7 +53,6 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
@@ -83,10 +85,6 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
 
-# Fix for the ancient UTF-8 bug in QuickLook (https://mths.be/bbo)
-# Commented out, as this is known to cause problems in various Adobe apps :(
-# See https://github.com/mathiasbynens/dotfiles/issues/237
-#echo "0x08000100:0" > ~/.CFUserTextEncoding
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
@@ -130,15 +128,18 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+# sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
+# sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+# sudo chflags uchg /private/var/vm/sleepimage
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
+
+# Set trackpad speed to highest
+sudo defaults write NSGlobalDomain com.apple.trackpad.scaling -int 3
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -161,6 +162,7 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
@@ -178,9 +180,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
 defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
@@ -330,10 +332,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
-###############################################################################
-# Dock, Dashboard, and hot corners                                            #
-###############################################################################
-
+##############################################################################
+# DOCK
+##############################################################################
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
@@ -351,18 +352,27 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
-
 # Wipe all (default) app icons from the Dock
-# This is only really useful when setting up a new Mac, or if you don’t use
-# the Dock to launch apps.
-#defaults write com.apple.dock persistent-apps -array
-
+defaults write com.apple.dock persistent-apps -array
 # Show only open applications in the Dock
-#defaults write com.apple.dock static-only -bool true
-
+defaults write com.apple.dock static-only -bool true
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
+
+##############################################################################
+# MISSION CONTROL and DASHBOARD
+##############################################################################
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
@@ -379,16 +389,7 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-# Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
-# Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
 
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
@@ -545,7 +546,7 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 ###############################################################################
 
 # Hide Spotlight tray-icon (and subsequent helper)
-	#sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 # Disable Spotlight indexing for any volume that gets mounted and has not yet been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"

@@ -180,10 +180,44 @@
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "/Users/Loudog/dotfiles/lou-osx.sh",
 			"settings":
 			{
 				"buffer_size": 55940,
+=======
+			"file": "/Users/Loudog/dotfiles/lou.bash_profile",
+			"settings":
+			{
+				"buffer_size": 232,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/loudog/dotfiles/lou-bash_prompt.sh",
+			"settings":
+			{
+				"buffer_size": 1674,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/loudog/dotfiles/lou-exports",
+			"settings":
+			{
+				"buffer_size": 792,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Loudog/dotfiles/lou-aliases",
+			"settings":
+			{
+				"buffer_size": 6099,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -201,18 +235,24 @@
 			"file": "/Users/Loudog/dotfiles/resources/aliases",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 6041,
+=======
+				"buffer_size": 55938,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/Loudog/dotfiles/resources/brew.sh",
+			"contents": "Package Control Messages\n========================\n\nMarkdownEditing\n---------------\n\n  # MarkdownEditing 2.2.3 Changelog\n  \n  Your _MarkdownEditing_ plugin is updated. Enjoy new version. For any type of\n  feedback you can use [GitHub issues][issues].\n  \n  ## Bug Fixes\n  \n  * Link references commands (Jump/Delete/Organize) now work correctly with no-link `[link text]` style and ignore cases.\n  * `[link text]` is now highlighted correctly.\n  * Folding correctly ignores fake titles in code blocks.\n  \n  ## New Features\n  \n  * You can now disable some of the key bindings through configuration. For example, if you want to disable the \"shift+tab\" => \"fold current section\" key binding, add `\"mde.keymap_disable.fold_section\": true` to your user config. For a full list of such key bindings, check the list below.\n  * Organize References command now sorts references by referencing order rather than alphebetic order.\n  * Code block highlight for clojure.\n  * You can use `MarkdownEditing: Change color scheme...` command in command palette to preview and change the color scheme you are using for markdown.\n  * Added `MDE: (Un)Fold Section` and `MDE: Jump Reference` to context menu (only appear if applicable based on the cursor's location).\n  \n  ### Configurable Key Bindings\n  \n  ```json\n  {\n      // Jump between link/image/footnote reference and definition\n      // Default keys: (OSX)super+ctrl+shift+l    (Linux/Win)ctrl+alt+g\n      \"mde.keymap_disable.reference_jump\": false,\n      // Add a new link\n      // Default keys: (OSX)super+alt+r   (Linux/Win)ctrl+super+r\n      \"mde.keymap_disable.reference_new_reference\": false,\n      // Add a new inline link\n      // Default keys: (OSX)super+alt+v   (Linux/Win)ctrl+super+v\n      \"mde.keymap_disable.reference_new_inline_link\": false,\n      // Add a new inline image\n      // Default keys: (OSX/Linux/Win)super+shift+k\n      \"mde.keymap_disable.reference_new_inline_image\": false,\n      // Add a new footnote\n      // Default keys: (OSX/Linux/Win)alt+shift+6\n      \"mde.keymap_disable.reference_new_footnote\": false,\n      // Fold current section\n      // Default keys: (OSX/Linux/Win)shift+tab\n      \"mde.keymap_disable.fold_section\": false,\n      // Open a panel showing all functions related to folding\n      // Default keys: (OSX/Linux/Win)ctrl+shift+tab\n      \"mde.keymap_disable.show_fold_all_sections\": false,\n      // Jump to the next heading (any level/same or higher level)\n      // Default keys: (OSX)super+ctrl/shift+pagedown (Linux/Win)ctrl+shift(+alt)+pagedown\n      \"mde.keymap_disable.goto_next_heading\": false,\n      // Jump to the previous heading (any level/same or higher level)\n      // Default keys: (OSX)super+ctrl/shift+pageup   (Linux/Win)ctrl+shift(+alt)+pageup\n      \"mde.keymap_disable.goto_previous_heading\": false\n  }\n  ```\n  \n  ## Changes\n  \n  [issues]: https://github.com/SublimeText-Markdown/MarkdownEditing/issues\n",
 			"settings":
 			{
-				"buffer_size": 2781,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 2904,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
@@ -223,21 +263,69 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 163.0,
-		"last_filter": "push",
+		"height": 374.0,
+		"last_filter": "git st",
 		"selected_items":
 		[
 			[
+				"git st",
+				"Git: Status"
+			],
+			[
 				"push",
 				"Git: Push"
+			],
+			[
+				"add all",
+				"Git: Add All"
 			],
 			[
 				"quick",
 				"Git: Quick Commit (repo)"
 			],
 			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"build",
+				"Build With: Bash"
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
 				"pull",
 				"Git: Pull"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"glue",
+				"Glue - Launch"
+			],
+			[
+				"buil",
+				"Build With: Bash"
+			],
+			[
+				"bui",
+				"Build With: Bash"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"bash",
+				"Build With: Bash"
+			],
+			[
+				"builld",
+				"Build: New Build System"
 			],
 			[
 				"fetch",
@@ -250,10 +338,6 @@
 			[
 				"add",
 				"Git: Add All"
-			],
-			[
-				"git",
-				"Git: Commit"
 			],
 			[
 				"preview",
@@ -278,14 +362,6 @@
 			[
 				"view",
 				"File: New View into File"
-			],
-			[
-				"readme",
-				"ReadmePlease"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"mini",
@@ -524,7 +600,7 @@
 				"Git: Status"
 			]
 		],
-		"width": 921.0
+		"width": 420.0
 	},
 	"console":
 	{
@@ -580,9 +656,24 @@
 	],
 	"file_history":
 	[
+<<<<<<< HEAD
 		"/Users/Loudog/dotfiles/sublime/EditDotfiles.sublime-workspace",
 		"/Users/Loudog/dotfiles/lou-brew.sh",
 		"/Users/Loudog/dotfiles/ToDo",
+=======
+		"/Users/Loudog/dotfiles/resources/exports",
+		"/Users/Loudog/dotfiles/resources/path",
+		"/Users/loudog/dotfiles/lou-functions",
+		"/Users/Loudog/dotfiles/resources/terminal.glue",
+		"/Users/loudog/Desktop/test.sh",
+		"/Users/loudog/Dropbox/Sync/Mackup/Library/Application Support/Sublime Text 3/Packages/User/bash.sublime-build",
+		"/Users/loudog/Library/Application Support/Sublime Text 3/Packages/Bash Build System/README.md",
+		"/Users/Loudog/dotfiles/ToDo",
+		"/Users/loudog/Library/Application Support/Sublime Text 3/Packages/User/BashBuild.sublime-build",
+		"/Users/Loudog/dotfiles/app-configs/slate/slate",
+		"/Users/Loudog/dotfiles/lou-brew.sh",
+		"/Users/Loudog/dotfiles/app-configs/slate/Sync.slate",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 		"/Users/Loudog/dotfiles/lou-osx",
 		"/Users/Loudog/dotfiles/lou-cask",
 		"/Users/Loudog/dotfiles/Brewfile",
@@ -698,6 +789,7 @@
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/commons/sticky_modifiers/SHIFT_L.xml",
 		"/Users/Loudog/Library/Application Support/Karabiner/VirtualKeyCodes.xml",
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/pass_through_mode.xml",
+<<<<<<< HEAD
 		"/Users/Loudog/Dropbox/Sync/Karabiner/User/ToggleviaFN.xml",
 		"/Users/Loudog/Library/Application Support/Karabiner/LaunchermodeBackup.xml",
 		"/Users/Loudog/Library/Application Support/Karabiner/nikitaReference.xml",
@@ -708,10 +800,13 @@
 		"/Applications/Karabiner.app/Contents/Resources/vkopenurldef.xml",
 		"/Users/Loudog/Library/Application Support/Karabiner/Assorted Settings.xml",
 		"/Users/Loudog/Dropbox/Sync/Karabiner/User/nikitaReference.xml"
+=======
+		"/Users/Loudog/Dropbox/Sync/Karabiner/User/ToggleviaFN.xml"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 33.0
 	},
 	"find_in_files":
 	{
@@ -819,6 +914,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sound",
+			"mouse",
+			"global",
+			"sleep",
+			"sound",
+			"solar",
+			"solarized",
+			"trackpad",
+			"cask",
+			"trackpad",
 			"cask",
 			"install --appdir=\"~/Applications\"",
 			"install",
@@ -936,17 +1041,7 @@
 			"F",
 			"NewKey",
 			"New-Mode",
-			"F-Mode",
-			"NKey",
-			"FKey",
-			"F-MODE",
-			"HyperCode",
-			"escape",
-			"{{ Hyper }}",
-			"Hyper",
-			"LC Window Center",
-			"Left Click Center",
-			"K"
+			"F-Mode"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -992,7 +1087,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1008,8 +1103,8 @@
 						"selection":
 						[
 							[
-								208,
-								208
+								275,
+								275
 							]
 						],
 						"settings":
@@ -1032,6 +1127,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1047,47 +1147,46 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
+<<<<<<< HEAD
+=======
+							"color_scheme": "Packages/InactivePanes/Packages/Theme - Flatland/Flatland Dark.tmTheme",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
@@ -1103,7 +1202,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 5,
+=======
+					"stack_index": 6,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 					"type": "text"
 				},
 				{
@@ -1119,8 +1222,8 @@
 						"selection":
 						[
 							[
-								123,
-								123
+								146,
+								146
 							]
 						],
 						"settings":
@@ -1141,13 +1244,41 @@
 								{
 									"1":
 									[
-										137,
-										138
+										191,
+										192
 									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
+<<<<<<< HEAD
+=======
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1158,6 +1289,7 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+<<<<<<< HEAD
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -1178,11 +1310,14 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+<<<<<<< HEAD
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1203,8 +1338,24 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
+=======
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
-							"color_scheme": "Packages/InactivePanes/Packages/MarkdownEditing/MarkdownEditor.tmTheme",
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
@@ -1221,30 +1372,43 @@
 						"translation.y": 1532.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 2,
+<<<<<<< HEAD
 					"file": "/Users/Loudog/dotfiles/lou-osx.sh",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 55940,
+=======
+					"file": "/Users/Loudog/dotfiles/lou.bash_profile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 232,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								1032,
 								1032
+=======
+								232,
+								232
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							]
 						],
 						"settings":
@@ -1267,21 +1431,58 @@
 							},
 							"bracket_highlighter.regions":
 							[
+<<<<<<< HEAD
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+<<<<<<< HEAD
+=======
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+<<<<<<< HEAD
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1297,15 +1498,26 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+<<<<<<< HEAD
+=======
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
+<<<<<<< HEAD
 								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
@@ -1322,6 +1534,9 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
+=======
+								"bh_single_quote_content"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1338,24 +1553,152 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/Loudog/dotfiles/lou-brew.sh",
+					"file": "/Users/loudog/dotfiles/lou-bash_prompt.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5789,
+						"buffer_size": 1674,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								744,
+								744
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										895,
+										897
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/dot.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										260,
+										262
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								116.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 116.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/loudog/dotfiles/lou-exports",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
 							]
 						],
 						"settings":
@@ -1378,6 +1721,369 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/Loudog/dotfiles/lou-aliases",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6099,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										45,
+										46
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										27,
+										28
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/Loudog/dotfiles/lou-brew.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+<<<<<<< HEAD
+					"buffer": 3,
+					"file": "/Users/Loudog/dotfiles/lou-brew.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5789,
+=======
+					"buffer": 7,
+					"file": "/Users/Loudog/dotfiles/lou-osx.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55938,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								0,
+								0
+=======
+								7369,
+								7369
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+<<<<<<< HEAD
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1393,11 +2099,14 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+<<<<<<< HEAD
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1418,11 +2127,24 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+=======
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+<<<<<<< HEAD
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1489,6 +2211,13 @@
 							},
 							"bracket_highlighter.regions":
 							[
+=======
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1499,6 +2228,7 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+<<<<<<< HEAD
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -1519,11 +2249,14 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+<<<<<<< HEAD
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1544,6 +2277,23 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
+=======
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1551,12 +2301,17 @@
 							"origPos":
 							[
 								0.0,
+<<<<<<< HEAD
 								0.0
+=======
+								2237.0
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1567,21 +2322,33 @@
 					"buffer": 5,
 					"file": "/Users/Loudog/dotfiles/resources/brew.sh",
 					"semi_transient": true,
+=======
+						"translation.y": 2237.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 					"settings":
 					{
-						"buffer_size": 2781,
+						"buffer_size": 2904,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1699,
-								1699
+								429,
+								429
 							]
 						],
 						"settings":
 						{
+							"auto_indent": false,
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1600,62 +2367,63 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
 							],
+							"default_dir": "/Users/loudog/dotfiles/sublime",
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
@@ -1665,13 +2433,21 @@
 								0.0
 							],
 							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"tab_width": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 4,
+=======
+					"stack_index": 8,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 					"type": "text"
 				}
 			]
@@ -1705,7 +2481,7 @@
 		"cols":
 		[
 			0.0,
-			0.374444580078,
+			0.0,
 			1.0
 		],
 		"rows":
@@ -1717,7 +2493,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 112.0
+		"height": 134.0
 	},
 	"output.find_results":
 	{
@@ -1745,11 +2521,59 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"alias",
 				"dotfiles/resources/aliases"
 			],
 			[
 				"lou-os",
+=======
+				"lou-osx",
+				"dotfiles/lou-osx.sh"
+			],
+			[
+				"exports",
+				"dotfiles/resources/exports"
+			],
+			[
+				"bash",
+				"dotfiles/resources/bash_prompt.sh"
+			],
+			[
+				"path",
+				"dotfiles/resources/path"
+			],
+			[
+				"louos",
+				"dotfiles/lou-osx.sh"
+			],
+			[
+				"export",
+				"dotfiles/resources/exports"
+			],
+			[
+				"",
+				"dotfiles/lou-brew.sh"
+			],
+			[
+				"lou",
+				"dotfiles/lou-aliases"
+			],
+			[
+				"brew",
+				"dotfiles/lou-brew.sh"
+			],
+			[
+				"sync.",
+				"dotfiles/app-configs/slate/Sync.slate"
+			],
+			[
+				"slate",
+				"dotfiles/app-configs/slate/slate"
+			],
+			[
+				"osx",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 				"dotfiles/lou-osx.sh"
 			],
 			[
@@ -1775,10 +2599,6 @@
 			[
 				"vim",
 				"vimrc"
-			],
-			[
-				"bash",
-				"bash_profile"
 			],
 			[
 				"bashrc",
@@ -2077,10 +2897,6 @@
 				"Karabiner/Reference/KeyList.xml"
 			],
 			[
-				"lou",
-				"Karabiner/User/LouLauncher.xml"
-			],
-			[
 				"samples",
 				"Resources/include/checkbox/samples.xml"
 			],
@@ -2193,10 +3009,6 @@
 				"Resources/modifierdef.xml"
 			],
 			[
-				"",
-				"Karabiner/VirtualKeyCodes.xml"
-			],
-			[
 				"pass",
 				"checkbox/pass_through_mode.xml"
 			],
@@ -2227,6 +3039,7 @@
 			[
 				"synta",
 				"Karabiner/User/SyntaxTesting.xml"
+<<<<<<< HEAD
 			],
 			[
 				"smples",
@@ -2255,6 +3068,8 @@
 			[
 				"browsing",
 				"Resources/include/checkbox/browsing_mode.xml"
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 			]
 		],
 		"width": 0.0
