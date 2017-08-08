@@ -1,8 +1,10 @@
 # lou-aliases
 
+
+# Custom
+alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias reada="defaults read > a"
 alias difb="defaults read > b; diff a b"
-
 
 # S10wens....
 # Easier navigation: .., ..., ...., ....., ~ and -

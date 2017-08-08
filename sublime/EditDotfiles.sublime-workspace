@@ -180,6 +180,12 @@
 			}
 		},
 		{
+<<<<<<< HEAD
+			"file": "/Users/Loudog/dotfiles/lou-osx.sh",
+			"settings":
+			{
+				"buffer_size": 55940,
+=======
 			"file": "/Users/Loudog/dotfiles/lou.bash_profile",
 			"settings":
 			{
@@ -211,6 +217,7 @@
 			"settings":
 			{
 				"buffer_size": 6099,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -225,10 +232,14 @@
 			}
 		},
 		{
-			"file": "/Users/Loudog/dotfiles/lou-osx.sh",
+			"file": "/Users/Loudog/dotfiles/resources/aliases",
 			"settings":
 			{
+<<<<<<< HEAD
+				"buffer_size": 6041,
+=======
 				"buffer_size": 55938,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -645,6 +656,11 @@
 	],
 	"file_history":
 	[
+<<<<<<< HEAD
+		"/Users/Loudog/dotfiles/sublime/EditDotfiles.sublime-workspace",
+		"/Users/Loudog/dotfiles/lou-brew.sh",
+		"/Users/Loudog/dotfiles/ToDo",
+=======
 		"/Users/Loudog/dotfiles/resources/exports",
 		"/Users/Loudog/dotfiles/resources/path",
 		"/Users/loudog/dotfiles/lou-functions",
@@ -657,6 +673,7 @@
 		"/Users/Loudog/dotfiles/app-configs/slate/slate",
 		"/Users/Loudog/dotfiles/lou-brew.sh",
 		"/Users/Loudog/dotfiles/app-configs/slate/Sync.slate",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 		"/Users/Loudog/dotfiles/lou-osx",
 		"/Users/Loudog/dotfiles/lou-cask",
 		"/Users/Loudog/dotfiles/Brewfile",
@@ -772,7 +789,20 @@
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/commons/sticky_modifiers/SHIFT_L.xml",
 		"/Users/Loudog/Library/Application Support/Karabiner/VirtualKeyCodes.xml",
 		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/pass_through_mode.xml",
+<<<<<<< HEAD
+		"/Users/Loudog/Dropbox/Sync/Karabiner/User/ToggleviaFN.xml",
+		"/Users/Loudog/Library/Application Support/Karabiner/LaunchermodeBackup.xml",
+		"/Users/Loudog/Library/Application Support/Karabiner/nikitaReference.xml",
+		"/Users/Loudog/Dropbox/Sync/Karabiner/User/ThrowMode.xml",
+		"/Applications/Karabiner.app/Contents/Resources/include/checkbox/launcher_mode.xml",
+		"/Users/Loudog/Dropbox/Sync/Karabiner/Reference/vkopenurldefRef.xml",
+		"/Users/Loudog/Dropbox/Sync/Karabiner/User/LouLauncher.xml.20170503",
+		"/Applications/Karabiner.app/Contents/Resources/vkopenurldef.xml",
+		"/Users/Loudog/Library/Application Support/Karabiner/Assorted Settings.xml",
+		"/Users/Loudog/Dropbox/Sync/Karabiner/User/nikitaReference.xml"
+=======
 		"/Users/Loudog/Dropbox/Sync/Karabiner/User/ToggleviaFN.xml"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 	],
 	"find":
 	{
@@ -1153,7 +1183,10 @@
 								"bh_regex_close",
 								"bh_regex_content"
 							],
+<<<<<<< HEAD
+=======
 							"color_scheme": "Packages/InactivePanes/Packages/Theme - Flatland/Flatland Dark.tmTheme",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
 							"last_modified_indicator_multiline": true,
@@ -1169,7 +1202,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
+					"stack_index": 5,
+=======
 					"stack_index": 6,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 					"type": "text"
 				},
 				{
@@ -1214,6 +1251,8 @@
 							},
 							"bracket_highlighter.regions":
 							[
+<<<<<<< HEAD
+=======
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1239,6 +1278,7 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1249,11 +1289,56 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+<<<<<<< HEAD
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+<<<<<<< HEAD
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+=======
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1269,6 +1354,7 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1283,7 +1369,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1532.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -1297,19 +1383,32 @@
 			[
 				{
 					"buffer": 2,
+<<<<<<< HEAD
+					"file": "/Users/Loudog/dotfiles/lou-osx.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55940,
+=======
 					"file": "/Users/Loudog/dotfiles/lou.bash_profile",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 232,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								1032,
+								1032
+=======
 								232,
 								232
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							]
 						],
 						"settings":
@@ -1332,11 +1431,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
+<<<<<<< HEAD
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+<<<<<<< HEAD
+=======
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1367,26 +1476,67 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+<<<<<<< HEAD
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+<<<<<<< HEAD
+=======
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
+<<<<<<< HEAD
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+=======
 								"bh_single_quote_content"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1883,20 +2033,34 @@
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
+					"buffer": 3,
+					"file": "/Users/Loudog/dotfiles/lou-brew.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5789,
+=======
 					"buffer": 7,
 					"file": "/Users/Loudog/dotfiles/lou-osx.sh",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 55938,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								0,
+								0
+=======
 								7369,
 								7369
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							]
 						],
 						"settings":
@@ -1919,31 +2083,7 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+<<<<<<< HEAD
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1954,11 +2094,190 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+<<<<<<< HEAD
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+=======
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+<<<<<<< HEAD
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/Loudog/dotfiles/resources/aliases",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+=======
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+<<<<<<< HEAD
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+<<<<<<< HEAD
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+=======
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1974,6 +2293,7 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content"
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"last_modified_indicator": true,
 							"last_modified_indicator_file_save_clear": false,
@@ -1981,12 +2301,28 @@
 							"origPos":
 							[
 								0.0,
+<<<<<<< HEAD
+								0.0
+=======
 								2237.0
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 							],
 							"syncScroll": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/Loudog/dotfiles/resources/brew.sh",
+					"semi_transient": true,
+=======
 						"translation.y": 2237.0,
 						"zoom_level": 1.0
 					},
@@ -1996,6 +2332,7 @@
 				{
 					"buffer": 8,
 					"semi_transient": false,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 					"settings":
 					{
 						"buffer_size": 2904,
@@ -2106,7 +2443,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
+					"stack_index": 4,
+=======
 					"stack_index": 8,
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 					"type": "text"
 				}
 			]
@@ -2180,6 +2521,13 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
+				"alias",
+				"dotfiles/resources/aliases"
+			],
+			[
+				"lou-os",
+=======
 				"lou-osx",
 				"dotfiles/lou-osx.sh"
 			],
@@ -2225,6 +2573,7 @@
 			],
 			[
 				"osx",
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 				"dotfiles/lou-osx.sh"
 			],
 			[
@@ -2690,6 +3039,37 @@
 			[
 				"synta",
 				"Karabiner/User/SyntaxTesting.xml"
+<<<<<<< HEAD
+			],
+			[
+				"smples",
+				"checkbox/samples.xml"
+			],
+			[
+				"custom",
+				"checkbox/custom_shortcuts.xml"
+			],
+			[
+				"alter",
+				"Karabiner/User/AlternativeFnKeys.xml"
+			],
+			[
+				"core",
+				"checkbox/core.xml"
+			],
+			[
+				"assorted",
+				"Karabiner/Assorted Settings.xml"
+			],
+			[
+				"jk",
+				"checkbox/languages/japanese/keyboard_layouts.xml"
+			],
+			[
+				"browsing",
+				"Resources/include/checkbox/browsing_mode.xml"
+=======
+>>>>>>> 29537c86c63063219a42391d3b04b1095c98f689
 			]
 		],
 		"width": 0.0
