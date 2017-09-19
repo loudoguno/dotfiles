@@ -2,11 +2,30 @@
 
 
 # Custom
+
+# Show hidden files
+alias showdot='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+# Hide hidden files
+alias hidedot='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Edit bash_profile in Sublime
+alias editBash='sudo sublime ~/.bash_profile'
+# Refresh bash_profile
+alias reloadBash='source ~/.bash_profile'
+
+# Mockaroo Claim Table
+alias getClaimTable='cd ~/Desktop; curl "https://www.mockaroo.com/dabd8c00/download?count=1000&key=14e6b9e0" > "Claim.csv"'
+# Mockaroo Person Table
+alias getPersonTable='cd ~/Desktop; curl "https://www.mockaroo.com/14b5b5e0/download?count=1000&key=14e6b9e0" > "Person_Insurance.csv"
+'
+
 alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias speedtest2='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias reada="defaults read > a"
 alias difb="defaults read > b; diff a b"
 
+
+# ##########################################
 # S10wens....
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
