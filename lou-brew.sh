@@ -164,7 +164,7 @@ brew cask install --appdir="~/Applications" google-chrome
 brew cask install --appdir="~/Applications" firefox
 brew cask install --appdir="~/Applications" evernote
 brew cask install --appdir="~/Applications" pocket
-brew cask install --appdir="~/Applications" fantastical
+# brew cask install --appdir="~/Applications" fantastical MUST BE INSTALLED FROM EVERNOTE
 brew cask install --appdir="~/Applications" snagit
 brew cask install --appdir="~/Applications" skitch
 
@@ -186,7 +186,10 @@ brew cask install --appdir="~/Applications" microsoft-office
 
 brew cask install --appdir="~/Applications" coconutbattery
 brew cask install --appdir="~/Applications" ui-browser
-# sketchup
+# brew cask install --appdir="~/Applications" netspot
+# brew cask install --appdir="~/Applications" kodi
+# sketchup or something else
+# sketchup or something else
 
 
 
